@@ -23,7 +23,7 @@ stringData:
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  namespace: bram-terlouw-dev
+  namespace: poc-postgress
   name: poc-postgress
 spec:
   replicas: 1
@@ -103,7 +103,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: bram-terlouw-dev
+  namespace: poc-postgress
   name: poc-postgress-service
 spec:
   ports:
