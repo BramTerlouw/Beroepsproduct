@@ -159,3 +159,26 @@ finally:
         cursor.close()
         conn.close()
         print("Database connection closed.")
+
+
+
+# Define the SQL command to drop a table
+drop_table_query = "DROP TABLE IF EXISTS fracture_incidents;"
+
+try:
+    conn = psycopg2.connect(**conn_params)
+    cursor = conn.cursor()
+
+    cursor.execute(drop_table_query)
+    
+    conn.commit()
+    print("Table 'fracture_incidents' dropped successfully.")
+
+except psycopg2.DatabaseError as e:
+    print(f"Error: {e}")
+    conn.rollback()
+finally:
+    if conn:
+        cursor.close()
+        conn.close()
+        print("Database connection closed.")

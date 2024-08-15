@@ -16,7 +16,7 @@ apiVersion: v1
 metadata:
   name: poc-postgress-secret
 stringData:
-  postgress_database: accidents
+  postgress_database: incidents
   postgress_password: password
   postgress_user: dev
 ---
@@ -104,7 +104,7 @@ kind: Service
 apiVersion: v1
 metadata:
   namespace: bram-terlouw-dev
-  name: poc-minio-service
+  name: poc-postgress-service
 spec:
   ports:
   - name: api
