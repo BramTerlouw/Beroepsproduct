@@ -14,7 +14,7 @@ spec:
 kind: Secret
 apiVersion: v1
 metadata:
-  name: poc-minio-secret
+  name: poc-minio-credentials
 stringData:
   minio_root_user: minio
   minio_root_password: minio123
@@ -69,12 +69,12 @@ spec:
             - name: MINIO_ROOT_USER
               valueFrom:
                 secretKeyRef:
-                  name: poc-minio-secret
+                  name: poc-minio-credentials
                   key: minio_root_user
             - name: MINIO_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: poc-minio-secret
+                  name: poc-minio-credentials
                   key: minio_root_password
           ports:
             - containerPort: 9000
@@ -140,9 +140,9 @@ spec:
   port:
     targetPort: api
   wildcardPolicy: None
-  # tls:
-  #   termination: edge
-  #   insecureEdgeTerminationPolicy: Redirect
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
 ---
 kind: Route
 apiVersion: route.openshift.io/v1

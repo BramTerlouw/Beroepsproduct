@@ -2,19 +2,12 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  namespace: poc-minio
+  namespace: bram-terlouw-dev
   name: poc-minio-job-seed-images
 spec:
   backoffLimit: 4
   template:
     spec:
-      initContainers:
-      - name: wait-for-minio
-        image: busybox:1.28
-        command: ['sh', '-c', 'until nc -z -v -w30 $MINIO_ENDPOINT 9000; do echo "Waiting for Minio connection..."; sleep 2; done;']
-        env:
-        - name: MINIO_ENDPOINT
-          value: poc-minio.svc.cluster.local
       containers:
       - name: add-images-to-bucket
         image: image-registry.openshift-image-registry.svc:5000/redhat-ods-applications/s2i-generic-data-science-notebook:1.2
@@ -29,22 +22,36 @@ spec:
           import boto3, os, botocore
 
           s3 = boto3.client("s3",
-                            endpoint_url=os.getenv("AWS_S3_ENDPOINT"),
-                            aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
-                            aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"))
-
+                            endpoint_url="http://poc-minio-service:9000",
+                            aws_access_key_id=os.getenv("minio_root_user"),
+                            aws_secret_access_key=os.getenv("minio_root_password"))
+          
           # Upload original images to minio
-          for filename in os.listdir("Data/incidents_images"):
-              with open(f"Data/incidents_images/{filename}", "rb") as f:
+          for filename in os.listdir("Beroepsproduct/Data/Incidents_images"):
+              with open(f"Beroepsproduct/Data/Incidents_images/{filename}", "rb") as f:
                   s3.upload_fileobj(f, "images", f"incidents/{filename}")
 
           # Upload processed images to minio
-          for filename in os.listdir("Data/Training_images"):
-              with open(f"Data/Training_images/{filename}", "rb") as f:
-                  s3.upload_fileobj(f, "images", f"train/{filename}")
+          local_base_dir = "Beroepsproduct/Data/Training_images"
+          bucket_name = "images"
+
+          # Walk through all directories and files within 'Training_images'
+          for root, dirs, files in os.walk(local_base_dir):
+              for filename in files:
+                  # Construct the full local path to the file
+                  local_file_path = os.path.join(root, filename)
+                  
+                  # Construct the S3 key by maintaining the directory structure
+                  # Remove the base directory part from the local path to get the relative path
+                  relative_path = os.path.relpath(local_file_path, local_base_dir)
+                  s3_key = f"train/{relative_path}"
+                  
+                  # Open the file and upload it to S3
+                  with open(local_file_path, "rb") as f:
+                      s3.upload_fileobj(f, bucket_name, s3_key)
 
           EOF
         envFrom:
         - secretRef:
-            name: secret-minio
+            name: poc-minio-credentials
       restartPolicy: Never
