@@ -1,0 +1,17 @@
+Name: fracture-classification-workbench
+Description: This workbench is used for training a small classification model, used to classify images of fractures.
+Notebook image:
+	- Image selection: TensorFlow
+	- Version selection: 2024.1
+Deployment size:
+	- Container size: Medium
+	- Accelerator: None
+Environment veriables: None
+Cluster storage:
+	- Check: New persistent storage
+	- Name: fracture-classification-workbench
+	- Description: Storage to make workbench persistent and save the notebooks and other files.
+	- Persistent storage size: 5Gi
+Dataconnection:
+	- Check: Use existing data connection
+	- Data connection: training-data

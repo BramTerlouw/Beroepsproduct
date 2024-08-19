@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  namespace: bram-terlouw-dev
+  # namespace: poc-minio
   name: poc-minio-job-seed-images
 spec:
   backoffLimit: 4

@@ -1,0 +1,24 @@
+Dataconnection training data
+Name: training-data
+Access key: minio
+Secret key: …
+Endpoint: http://poc-minio-service:9000
+Region: eu-west-1
+Bucket: images
+
+Dataconnection models
+Name: models
+Access key: minio
+Secret key: …
+Endpoint: http://poc-minio-service:9000
+Region: eu-west-1
+Bucket: models
+
+Dataconnection pipeline artefacts
+Name: pipeline-artefacts
+Access key: minio
+Secret key: …
+Endpoint: https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com
+Region: eu-west-1
+Bucket: artefacts
+

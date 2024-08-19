@@ -1,0 +1,15 @@
+Access key: select pipeline-artefacts
+Database:
+	- Check: Use default database stored on your cluster
+
+Pipeline import
+…
+
+Experiment
+Name:
+Description:
+
+Pipeline run
+Name:
+Pipeline:
+Version:

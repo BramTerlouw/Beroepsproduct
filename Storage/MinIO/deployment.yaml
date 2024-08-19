@@ -22,7 +22,7 @@ stringData:
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  namespace: poc-minio
+  # namespace: poc-minio
   name: poc-minio
 spec:
   replicas: 1
@@ -106,7 +106,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  namespace: poc-minio
+  # namespace: poc-minio
   name: poc-minio-service
 spec:
   ipFamilies:
@@ -130,7 +130,7 @@ spec:
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: poc-minio
+  # namespace: poc-minio
   name: poc-minio-api-route
 spec:
   to:
@@ -147,7 +147,7 @@ spec:
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  namespace: poc-minio
+  # namespace: poc-minio
   name: poc-minio-ui-route
 spec:
   to:
