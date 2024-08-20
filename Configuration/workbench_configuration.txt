@@ -6,7 +6,7 @@ Notebook image:
 Deployment size:
 	- Container size: Medium
 	- Accelerator: None
-Environment veriables: None
+Environment variables: None
 Cluster storage:
 	- Check: New persistent storage
 	- Name: fracture-classification-workbench
