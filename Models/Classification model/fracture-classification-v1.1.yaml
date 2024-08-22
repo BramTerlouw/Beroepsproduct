@@ -1,9 +1,10 @@
 # PIPELINE DEFINITION
-# Name: fracture-classification
+# Name: fracture-classification-v1-1
 # Inputs:
 #    batch_size: str [Default: '10']
 #    experiment_name: str [Default: 'default']
 #    nr_of_epochs: int [Default: 5.0]
+#    run_name: str [Default: 'default']
 components:
   comp-run-a-file:
     executorLabel: exec-run-a-file
@@ -27,6 +28,10 @@ components:
           defaultValue: default
           isOptional: true
           parameterType: STRING
+        run_name:
+          defaultValue: default
+          isOptional: true
+          parameterType: STRING
 deploymentSpec:
   executors:
     exec-run-a-file:
@@ -43,9 +48,9 @@ deploymentSpec:
           --output requirements-elyra.txt"
 
           sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
-          && python3 bootstrapper.py --pipeline-name ''fracture-classification'' --cos-endpoint
-          ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
-          --cos-bucket ''artefacts'' --cos-directory ''fracture-classification-0820125850''
+          && python3 bootstrapper.py --pipeline-name ''fracture-classification-v1.1''
+          --cos-endpoint ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''fracture-classification-v1.1-0822093129''
           --cos-dependencies-archive ''Load_Data-8ded5050-3e9b-4c2c-b6b6-732871b5c896.tar.gz''
           --file ''Beroepsproduct/Models/Classification model/Load_Data.ipynb'' --outputs
           ''images_zipped.zip'' "
@@ -90,9 +95,9 @@ deploymentSpec:
           --output requirements-elyra.txt"
 
           sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
-          && python3 bootstrapper.py --pipeline-name ''fracture-classification'' --cos-endpoint
-          ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
-          --cos-bucket ''artefacts'' --cos-directory ''fracture-classification-0820125850''
+          && python3 bootstrapper.py --pipeline-name ''fracture-classification-v1.1''
+          --cos-endpoint ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''fracture-classification-v1.1-0822093129''
           --cos-dependencies-archive ''Train_Model-ab6c943e-958c-4853-9abf-b35da2da9c0c.tar.gz''
           --file ''Beroepsproduct/Models/Classification model/Train_Model.ipynb''
           --inputs ''images_zipped.zip'' --outputs ''fracture_model.h5'' --pipeline-parameters
@@ -124,6 +129,8 @@ deploymentSpec:
         args:
         - 'experiment_name="$0"
 
+          run_name="$1"
+
           sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
 
           sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
@@ -135,16 +142,17 @@ deploymentSpec:
           --output requirements-elyra.txt"
 
           sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
-          && python3 bootstrapper.py --pipeline-name ''fracture-classification'' --cos-endpoint
-          ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
-          --cos-bucket ''artefacts'' --cos-directory ''fracture-classification-0820125850''
+          && python3 bootstrapper.py --pipeline-name ''fracture-classification-v1.1''
+          --cos-endpoint ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''fracture-classification-v1.1-0822093129''
           --cos-dependencies-archive ''Save_Model-faf8533b-ee1d-4bd3-86d9-0bbfd2003aa1.tar.gz''
           --file ''Beroepsproduct/Models/Classification model/Save_Model.ipynb'' --inputs
-          ''images_zipped.zip;fracture_model.h5'' --pipeline-parameters ''experiment_name=$experiment_name''
+          ''images_zipped.zip;fracture_model.h5'' --pipeline-parameters ''experiment_name=$experiment_name;run_name=$run_name''
           --parameter-pass-method ''env'' "
 
           '
         - '{{$.inputs.parameters[''experiment_name'']}}'
+        - '{{$.inputs.parameters[''run_name'']}}'
         command:
         - sh
         - -c
@@ -167,7 +175,7 @@ deploymentSpec:
           memoryLimit: 8.0
           memoryRequest: 8.0
 pipelineInfo:
-  name: fracture-classification
+  name: fracture-classification-v1-1
 root:
   dag:
     tasks:
@@ -204,6 +212,8 @@ root:
           parameters:
             experiment_name:
               componentInputParameter: experiment_name
+            run_name:
+              componentInputParameter: run_name
         taskInfo:
           name: Save_Model
   inputDefinitions:
@@ -220,6 +230,10 @@ root:
         defaultValue: 5.0
         isOptional: true
         parameterType: NUMBER_INTEGER
+      run_name:
+        defaultValue: default
+        isOptional: true
+        parameterType: STRING
 schemaVersion: 2.1.0
 sdkVersion: kfp-2.5.0
 ---

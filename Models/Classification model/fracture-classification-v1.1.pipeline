@@ -169,7 +169,8 @@
           "app_data": {
             "component_parameters": {
               "pipeline_parameters": [
-                "experiment_name"
+                "experiment_name",
+                "run_name"
               ],
               "dependencies": [],
               "include_subdirectories": false,
@@ -257,11 +258,11 @@
         "version": 8,
         "runtime_type": "KUBEFLOW_PIPELINES",
         "properties": {
-          "name": "fracture-classification",
+          "name": "fracture-classification-v1.1",
           "runtime": "Data Science Pipelines",
           "pipeline_defaults": {
-            "kubernetes_pod_labels": [],
             "kubernetes_pod_annotations": [],
+            "kubernetes_pod_labels": [],
             "mounted_volumes": [],
             "kubernetes_tolerations": [],
             "kubernetes_shared_mem_size": {},
@@ -285,7 +286,7 @@
                 "type": "String",
                 "value": "default"
               },
-              "required": true
+              "required": false
             },
             {
               "name": "batch_size",
@@ -293,6 +294,15 @@
               "default_value": {
                 "type": "String",
                 "value": "10"
+              },
+              "required": true
+            },
+            {
+              "name": "run_name",
+              "description": "Describes the name of the pipeline run.",
+              "default_value": {
+                "type": "String",
+                "value": "default"
               },
               "required": false
             }
