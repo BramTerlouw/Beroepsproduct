@@ -1,0 +1,380 @@
+{
+  "doc_type": "pipeline",
+  "version": "3.0",
+  "json_schema": "http://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "id": "elyra-auto-generated-pipeline",
+  "primary_pipeline": "primary",
+  "pipelines": [
+    {
+      "id": "primary",
+      "nodes": [
+        {
+          "id": "8c5aef6c-cd56-49d9-b374-f1fc64078d12",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "pipeline_parameters": [
+                "project_name",
+                "experiment_name",
+                "run_name"
+              ],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "outputs": [
+                "modals.zip"
+              ],
+              "env_vars": [
+                {
+                  "env_var": "AWS_S3_ENDPOINT",
+                  "value": "http://poc-minio-service:9000"
+                },
+                {
+                  "env_var": "AWS_ACCESS_KEY_ID",
+                  "value": "minio"
+                },
+                {
+                  "env_var": "AWS_SECRET_ACCESS_KEY",
+                  "value": "minio123"
+                },
+                {
+                  "env_var": "AWS_DEFAULT_REGION",
+                  "value": "eu-west-1"
+                },
+                {
+                  "env_var": "fracture"
+                }
+              ],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "Download_Models.ipynb"
+            },
+            "label": "",
+            "ui_data": {
+              "label": "Download_Models.ipynb",
+              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "x_pos": 50,
+              "y_pos": 50,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              }
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "b6a0a6a9-ed2b-42d3-9e57-c290eb762508",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "dependencies": [],
+              "include_subdirectories": false,
+              "outputs": [
+                "images_zipped.zip"
+              ],
+              "env_vars": [
+                {
+                  "env_var": "AWS_S3_ENDPOINT",
+                  "value": "http://poc-minio-service:9000"
+                },
+                {
+                  "env_var": "AWS_ACCESS_KEY_ID",
+                  "value": "minio"
+                },
+                {
+                  "env_var": "AWS_SECRET_ACCESS_KEY",
+                  "value": "minio123"
+                },
+                {
+                  "env_var": "AWS_DEFAULT_REGION",
+                  "value": "eu-west-1"
+                }
+              ],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "Retrieve_Validation_Images.ipynb"
+            },
+            "label": "",
+            "ui_data": {
+              "label": "Retrieve_Validation_Images.ipynb",
+              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "x_pos": 50,
+              "y_pos": 165,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              }
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "a1d35ba6-1120-4bb7-90fc-50c1a636327a",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "pipeline_parameters": [
+                "project_name"
+              ],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "outputs": [],
+              "env_vars": [
+                {
+                  "env_var": "AWS_S3_ENDPOINT",
+                  "value": "http://poc-minio-service:9000"
+                },
+                {
+                  "env_var": "AWS_ACCESS_KEY_ID",
+                  "value": "minio"
+                },
+                {
+                  "env_var": "AWS_SECRET_ACCESS_KEY",
+                  "value": "minio123"
+                },
+                {
+                  "env_var": "AWS_DEFAULT_REGION",
+                  "value": "eu-west-1"
+                }
+              ],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "Save_For_Production.ipynb"
+            },
+            "label": "",
+            "ui_data": {
+              "label": "Save_For_Production.ipynb",
+              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "x_pos": 530,
+              "y_pos": 107.5,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "cb490e6f-41ef-4e6f-9ee3-703874b6dc5d",
+                  "node_id_ref": "2a7385e1-26a9-46b6-8251-70027f3d32ab",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "2a7385e1-26a9-46b6-8251-70027f3d32ab",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "dependencies": [],
+              "include_subdirectories": false,
+              "outputs": [
+                "replacement.zip",
+                "model_comparison.txt"
+              ],
+              "env_vars": [],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "Score_Models.ipynb",
+              "memory": 8,
+              "memory_limit": 8
+            },
+            "label": "",
+            "ui_data": {
+              "label": "Score_Models.ipynb",
+              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "x_pos": 290,
+              "y_pos": 107.5,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "c8c55c9b-044b-49d9-b2a6-bc5db2243c61",
+                  "node_id_ref": "8c5aef6c-cd56-49d9-b374-f1fc64078d12",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "50fd0c86-2562-4228-bfce-753390a1db07",
+                  "node_id_ref": "b6a0a6a9-ed2b-42d3-9e57-c290eb762508",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "app_data": {
+        "ui_data": {
+          "comments": []
+        },
+        "version": 8,
+        "runtime_type": "KUBEFLOW_PIPELINES",
+        "properties": {
+          "name": "fracture-scoring-v1.1",
+          "runtime": "Data Science Pipelines",
+          "pipeline_defaults": {
+            "kubernetes_pod_annotations": [],
+            "kubernetes_pod_labels": [],
+            "kubernetes_tolerations": [],
+            "kubernetes_shared_mem_size": {},
+            "mounted_volumes": [],
+            "env_vars": [],
+            "kubernetes_secrets": [],
+            "runtime_image": "quay.io/modh/runtime-images@sha256:e46fd90085206b1d77a18635db5784bca1f34e69c87ffbc13c6bffd65fd3c9d5"
+          },
+          "pipeline_parameters": [
+            {
+              "name": "project_name",
+              "description": "",
+              "default_value": {
+                "type": "String",
+                "value": "default"
+              },
+              "required": true
+            },
+            {
+              "name": "experiment_name",
+              "description": "",
+              "default_value": {
+                "type": "String",
+                "value": "default"
+              },
+              "required": true
+            },
+            {
+              "name": "run_name",
+              "description": "",
+              "default_value": {
+                "type": "String",
+                "value": "default"
+              },
+              "required": true
+            }
+          ]
+        }
+      },
+      "runtime_ref": ""
+    }
+  ],
+  "schemas": []
+}

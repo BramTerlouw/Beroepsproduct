@@ -1,0 +1,309 @@
+# PIPELINE DEFINITION
+# Name: fracture-scoring-v1-1
+# Inputs:
+#    experiment_name: str [Default: 'default']
+#    project_name: str [Default: 'default']
+#    run_name: str [Default: 'default']
+components:
+  comp-run-a-file:
+    executorLabel: exec-run-a-file
+    inputDefinitions:
+      parameters:
+        experiment_name:
+          defaultValue: default
+          isOptional: true
+          parameterType: STRING
+        project_name:
+          defaultValue: default
+          isOptional: true
+          parameterType: STRING
+        run_name:
+          defaultValue: default
+          isOptional: true
+          parameterType: STRING
+  comp-run-a-file-2:
+    executorLabel: exec-run-a-file-2
+  comp-run-a-file-3:
+    executorLabel: exec-run-a-file-3
+  comp-run-a-file-4:
+    executorLabel: exec-run-a-file-4
+    inputDefinitions:
+      parameters:
+        project_name:
+          defaultValue: default
+          isOptional: true
+          parameterType: STRING
+deploymentSpec:
+  executors:
+    exec-run-a-file:
+      container:
+        args:
+        - 'project_name="$0"
+
+          experiment_name="$1"
+
+          run_name="$2"
+
+          sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''fracture-scoring-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''fracture-scoring-v1.1-0828145957''
+          --cos-dependencies-archive ''Download_Models-8c5aef6c-cd56-49d9-b374-f1fc64078d12.tar.gz''
+          --file ''Beroepsproduct/Models/Scoring/Download_Models.ipynb'' --outputs
+          ''modals.zip'' --pipeline-parameters ''project_name=$project_name;experiment_name=$experiment_name;run_name=$run_name''
+          --parameter-pass-method ''env'' "
+
+          '
+        - '{{$.inputs.parameters[''project_name'']}}'
+        - '{{$.inputs.parameters[''experiment_name'']}}'
+        - '{{$.inputs.parameters[''run_name'']}}'
+        command:
+        - sh
+        - -c
+        env:
+        - name: AWS_S3_ENDPOINT
+          value: http://poc-minio-service:9000
+        - name: AWS_DEFAULT_REGION
+          value: eu-west-1
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:e46fd90085206b1d77a18635db5784bca1f34e69c87ffbc13c6bffd65fd3c9d5
+    exec-run-a-file-2:
+      container:
+        args:
+        - 'sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''fracture-scoring-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''fracture-scoring-v1.1-0828145957''
+          --cos-dependencies-archive ''Retrieve_Validation_Images-b6a0a6a9-ed2b-42d3-9e57-c290eb762508.tar.gz''
+          --file ''Beroepsproduct/Models/Scoring/Retrieve_Validation_Images.ipynb''
+          --outputs ''images_zipped.zip'' "
+
+          '
+        command:
+        - sh
+        - -c
+        env:
+        - name: AWS_S3_ENDPOINT
+          value: http://poc-minio-service:9000
+        - name: AWS_DEFAULT_REGION
+          value: eu-west-1
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:e46fd90085206b1d77a18635db5784bca1f34e69c87ffbc13c6bffd65fd3c9d5
+    exec-run-a-file-3:
+      container:
+        args:
+        - 'sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''fracture-scoring-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''fracture-scoring-v1.1-0828145957''
+          --cos-dependencies-archive ''Score_Models-2a7385e1-26a9-46b6-8251-70027f3d32ab.tar.gz''
+          --file ''Beroepsproduct/Models/Scoring/Score_Models.ipynb'' --inputs ''images_zipped.zip;modals.zip''
+          --outputs ''replacement.zip;model_comparison.txt'' "
+
+          '
+        command:
+        - sh
+        - -c
+        env:
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:e46fd90085206b1d77a18635db5784bca1f34e69c87ffbc13c6bffd65fd3c9d5
+        resources:
+          memoryLimit: 8.0
+          memoryRequest: 8.0
+    exec-run-a-file-4:
+      container:
+        args:
+        - 'project_name="$0"
+
+          sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''fracture-scoring-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''fracture-scoring-v1.1-0828145957''
+          --cos-dependencies-archive ''Save_For_Production-a1d35ba6-1120-4bb7-90fc-50c1a636327a.tar.gz''
+          --file ''Beroepsproduct/Models/Scoring/Save_For_Production.ipynb'' --inputs
+          ''model_comparison.txt;images_zipped.zip;modals.zip;replacement.zip'' --pipeline-parameters
+          ''project_name=$project_name'' --parameter-pass-method ''env'' "
+
+          '
+        - '{{$.inputs.parameters[''project_name'']}}'
+        command:
+        - sh
+        - -c
+        env:
+        - name: AWS_S3_ENDPOINT
+          value: http://poc-minio-service:9000
+        - name: AWS_DEFAULT_REGION
+          value: eu-west-1
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:e46fd90085206b1d77a18635db5784bca1f34e69c87ffbc13c6bffd65fd3c9d5
+pipelineInfo:
+  name: fracture-scoring-v1-1
+root:
+  dag:
+    tasks:
+      run-a-file:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file
+        inputs:
+          parameters:
+            experiment_name:
+              componentInputParameter: experiment_name
+            project_name:
+              componentInputParameter: project_name
+            run_name:
+              componentInputParameter: run_name
+        taskInfo:
+          name: Download_Models
+      run-a-file-2:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file-2
+        taskInfo:
+          name: Retrieve_Validation_Images
+      run-a-file-3:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file-3
+        dependentTasks:
+        - run-a-file
+        - run-a-file-2
+        taskInfo:
+          name: Score_Models
+      run-a-file-4:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file-4
+        dependentTasks:
+        - run-a-file-3
+        inputs:
+          parameters:
+            project_name:
+              componentInputParameter: project_name
+        taskInfo:
+          name: Save_For_Production
+  inputDefinitions:
+    parameters:
+      experiment_name:
+        defaultValue: default
+        isOptional: true
+        parameterType: STRING
+      project_name:
+        defaultValue: default
+        isOptional: true
+        parameterType: STRING
+      run_name:
+        defaultValue: default
+        isOptional: true
+        parameterType: STRING
+schemaVersion: 2.1.0
+sdkVersion: kfp-2.5.0
+---
+platforms:
+  kubernetes:
+    deploymentSpec:
+      executors:
+        exec-run-a-file:
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret
+        exec-run-a-file-2:
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret
+        exec-run-a-file-3:
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret
+        exec-run-a-file-4:
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret

@@ -49,25 +49,6 @@ spec:
                   # Open the file and upload it to S3
                   with open(local_file_path, "rb") as f:
                       s3.upload_fileobj(f, bucket_name, s3_key)
-            
-          # Upload validation images to minio
-          local_base_dir_validation = "Beroepsproduct/Data/Validation_images"
-          bucket_name = "images"
-
-          # Walk through all directories and files within 'Validation_images'
-          for root, dirs, files in os.walk(local_base_dir_validation):
-              for filename in files:
-                  # Construct the full local path to the file
-                  local_file_path = os.path.join(root, filename)
-                  
-                  # Construct the S3 key by maintaining the directory structure
-                  # Remove the base directory part from the local path to get the relative path
-                  relative_path = os.path.relpath(local_file_path, local_base_dir_validation)
-                  s3_key = f"validate/{relative_path}"
-                  
-                  # Open the file and upload it to S3
-                  with open(local_file_path, "rb") as f:
-                      s3.upload_fileobj(f, bucket_name, s3_key)
 
           EOF
         envFrom:
