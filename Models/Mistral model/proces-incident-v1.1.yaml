@@ -1,0 +1,393 @@
+# PIPELINE DEFINITION
+# Name: proces-incident-v1-1
+components:
+  comp-run-a-file:
+    executorLabel: exec-run-a-file
+  comp-run-a-file-2:
+    executorLabel: exec-run-a-file-2
+  comp-run-a-file-3:
+    executorLabel: exec-run-a-file-3
+  comp-run-a-file-4:
+    executorLabel: exec-run-a-file-4
+  comp-run-a-file-5:
+    executorLabel: exec-run-a-file-5
+deploymentSpec:
+  executors:
+    exec-run-a-file:
+      container:
+        args:
+        - 'sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''proces-incident-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.cluster-l96p4.sandbox1480.opentlc.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''proces-incident-v1.1-0829135614''
+          --cos-dependencies-archive ''retrieve_unprocessed_incidents-d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531.tar.gz''
+          --file ''Beroepsproduct/Models/Mistral model/retrieve_unprocessed_incidents.ipynb''
+          --outputs ''unprocessed_incidents.txt'' "
+
+          '
+        command:
+        - sh
+        - -c
+        env:
+        - name: DATABASE_NAME
+          value: incidents
+        - name: DATABASE_USER
+          value: dev
+        - name: DATABASE_PASS
+          value: password
+        - name: DATABASE_HOST
+          value: poc-postgress-service.bram-terlouw-dev.svc.cluster.local
+        - name: DATABASE_PORT
+          value: '5432'
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:4e3bac6151402e97e79711e262b396eb515e70ca9217a48103a6cfb96a99fde2
+    exec-run-a-file-2:
+      container:
+        args:
+        - 'sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''proces-incident-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.cluster-l96p4.sandbox1480.opentlc.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''proces-incident-v1.1-0829135614''
+          --cos-dependencies-archive ''generic_entity_filter-d3109ac6-3de5-45dc-9227-344ac4f1bb2d.tar.gz''
+          --file ''Beroepsproduct/Models/Mistral model/generic_entity_filter.ipynb''
+          --inputs ''unprocessed_incidents.txt'' "
+
+          '
+        command:
+        - sh
+        - -c
+        env:
+        - name: DATABASE_NAME
+          value: incidents
+        - name: DATABASE_USER
+          value: dev
+        - name: DATABASE_PASS
+          value: password
+        - name: DATABASE_HOST
+          value: poc-postgress-service.bram-terlouw-dev.svc.cluster.local
+        - name: DATABASE_PORT
+          value: '5432'
+        - name: ENTITY_TO_PROCES
+          value: incident_date
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:4e3bac6151402e97e79711e262b396eb515e70ca9217a48103a6cfb96a99fde2
+    exec-run-a-file-3:
+      container:
+        args:
+        - 'sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''proces-incident-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.cluster-l96p4.sandbox1480.opentlc.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''proces-incident-v1.1-0829135614''
+          --cos-dependencies-archive ''generic_entity_filter-5db999b9-eafc-451f-84f7-e26bc5bc9792.tar.gz''
+          --file ''Beroepsproduct/Models/Mistral model/generic_entity_filter.ipynb''
+          --inputs ''unprocessed_incidents.txt'' "
+
+          '
+        command:
+        - sh
+        - -c
+        env:
+        - name: DATABASE_NAME
+          value: incidents
+        - name: DATABASE_USER
+          value: dev
+        - name: DATABASE_PASS
+          value: password
+        - name: DATABASE_HOST
+          value: poc-postgress-service.bram-terlouw-dev.svc.cluster.local
+        - name: DATABASE_PORT
+          value: '5432'
+        - name: ENTITY_TO_PROCES
+          value: incident_location
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:4e3bac6151402e97e79711e262b396eb515e70ca9217a48103a6cfb96a99fde2
+    exec-run-a-file-4:
+      container:
+        args:
+        - 'sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''proces-incident-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.cluster-l96p4.sandbox1480.opentlc.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''proces-incident-v1.1-0829135614''
+          --cos-dependencies-archive ''generic_entity_filter-42e164fd-0f26-405e-bc75-9bc67897fad9.tar.gz''
+          --file ''Beroepsproduct/Models/Mistral model/generic_entity_filter.ipynb''
+          --inputs ''unprocessed_incidents.txt'' "
+
+          '
+        command:
+        - sh
+        - -c
+        env:
+        - name: DATABASE_NAME
+          value: incidents
+        - name: DATABASE_USER
+          value: dev
+        - name: DATABASE_PASS
+          value: password
+        - name: DATABASE_HOST
+          value: poc-postgress-service.bram-terlouw-dev.svc.cluster.local
+        - name: DATABASE_PORT
+          value: '5432'
+        - name: ENTITY_TO_PROCES
+          value: patient_name
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:4e3bac6151402e97e79711e262b396eb515e70ca9217a48103a6cfb96a99fde2
+    exec-run-a-file-5:
+      container:
+        args:
+        - 'sh -c "mkdir -p ./jupyter-work-dir && cd ./jupyter-work-dir"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/bootstrapper.py''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/bootstrapper.py
+          --output bootstrapper.py"
+
+          sh -c "echo ''Downloading file:///opt/app-root/bin/utils/requirements-elyra.txt''
+          && curl --fail -H ''Cache-Control: no-cache'' -L file:///opt/app-root/bin/utils/requirements-elyra.txt
+          --output requirements-elyra.txt"
+
+          sh -c "python3 -m pip install  packaging && python3 -m pip freeze > requirements-current.txt
+          && python3 bootstrapper.py --pipeline-name ''proces-incident-v1.1'' --cos-endpoint
+          ''https://poc-minio-api-route-bram-terlouw-dev.apps.cluster-l96p4.sandbox1480.opentlc.com''
+          --cos-bucket ''ds-pipelines'' --cos-directory ''proces-incident-v1.1-0829135614''
+          --cos-dependencies-archive ''generic_entity_filter-de311b98-c389-45aa-aaf4-c97a43c9ae52.tar.gz''
+          --file ''Beroepsproduct/Models/Mistral model/generic_entity_filter.ipynb''
+          --inputs ''unprocessed_incidents.txt'' "
+
+          '
+        command:
+        - sh
+        - -c
+        env:
+        - name: DATABASE_NAME
+          value: incidents
+        - name: DATABASE_USER
+          value: dev
+        - name: DATABASE_PASS
+          value: password
+        - name: DATABASE_HOST
+          value: poc-postgress-service.bram-terlouw-dev.svc.cluster.local
+        - name: DATABASE_PORT
+          value: '5432'
+        - name: ENTITY_TO_PROCES
+          value: patient_complaints
+        - name: ELYRA_RUNTIME_ENV
+          value: kfp
+        - name: ELYRA_ENABLE_PIPELINE_INFO
+          value: 'True'
+        - name: ELYRA_WRITABLE_CONTAINER_DIR
+          value: /tmp
+        - name: ELYRA_RUN_NAME
+          value: '{{workflow.uid}}'
+        image: quay.io/modh/runtime-images@sha256:4e3bac6151402e97e79711e262b396eb515e70ca9217a48103a6cfb96a99fde2
+pipelineInfo:
+  name: proces-incident-v1-1
+root:
+  dag:
+    tasks:
+      run-a-file:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file
+        taskInfo:
+          name: retrieve_unprocessed_incidents
+      run-a-file-2:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file-2
+        dependentTasks:
+        - run-a-file
+        taskInfo:
+          name: get_incident_date
+      run-a-file-3:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file-3
+        dependentTasks:
+        - run-a-file
+        taskInfo:
+          name: get_incident_location
+      run-a-file-4:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file-4
+        dependentTasks:
+        - run-a-file
+        taskInfo:
+          name: get_patient_name
+      run-a-file-5:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-run-a-file-5
+        dependentTasks:
+        - run-a-file
+        taskInfo:
+          name: get_patient_complaints
+schemaVersion: 2.1.0
+sdkVersion: kfp-2.7.0
+---
+platforms:
+  kubernetes:
+    deploymentSpec:
+      executors:
+        exec-run-a-file:
+          podMetadata:
+            annotations:
+              elyra/node-file-name: Beroepsproduct/Models/Mistral model/retrieve_unprocessed_incidents.ipynb
+              elyra/pipeline-source: proces-incident-v1.1.pipeline
+            labels:
+              elyra/experiment-name: ''
+              elyra/node-name: retrieve_unprocessed_incidents
+              elyra/node-type: notebook-script
+              elyra/pipeline-name: proces-incident-v1.1
+              elyra/pipeline-version: ''
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret
+        exec-run-a-file-2:
+          podMetadata:
+            annotations:
+              elyra/node-file-name: Beroepsproduct/Models/Mistral model/generic_entity_filter.ipynb
+              elyra/pipeline-source: proces-incident-v1.1.pipeline
+            labels:
+              elyra/experiment-name: ''
+              elyra/node-name: get_incident_date
+              elyra/node-type: notebook-script
+              elyra/pipeline-name: proces-incident-v1.1
+              elyra/pipeline-version: ''
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret
+        exec-run-a-file-3:
+          podMetadata:
+            annotations:
+              elyra/node-file-name: Beroepsproduct/Models/Mistral model/generic_entity_filter.ipynb
+              elyra/pipeline-source: proces-incident-v1.1.pipeline
+            labels:
+              elyra/experiment-name: ''
+              elyra/node-name: get_incident_location
+              elyra/node-type: notebook-script
+              elyra/pipeline-name: proces-incident-v1.1
+              elyra/pipeline-version: ''
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret
+        exec-run-a-file-4:
+          podMetadata:
+            annotations:
+              elyra/node-file-name: Beroepsproduct/Models/Mistral model/generic_entity_filter.ipynb
+              elyra/pipeline-source: proces-incident-v1.1.pipeline
+            labels:
+              elyra/experiment-name: ''
+              elyra/node-name: get_patient_name
+              elyra/node-type: notebook-script
+              elyra/pipeline-name: proces-incident-v1.1
+              elyra/pipeline-version: ''
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret
+        exec-run-a-file-5:
+          podMetadata:
+            annotations:
+              elyra/node-file-name: Beroepsproduct/Models/Mistral model/generic_entity_filter.ipynb
+              elyra/pipeline-source: proces-incident-v1.1.pipeline
+            labels:
+              elyra/experiment-name: ''
+              elyra/node-name: get_patient_complaints
+              elyra/node-type: notebook-script
+              elyra/pipeline-name: proces-incident-v1.1
+              elyra/pipeline-version: ''
+          secretAsEnv:
+          - keyToEnv:
+            - envVar: AWS_ACCESS_KEY_ID
+              secretKey: AWS_ACCESS_KEY_ID
+            - envVar: AWS_SECRET_ACCESS_KEY
+              secretKey: AWS_SECRET_ACCESS_KEY
+            secretName: dashboard-dspa-secret

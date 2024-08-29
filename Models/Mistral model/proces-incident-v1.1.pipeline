@@ -1,0 +1,397 @@
+{
+  "doc_type": "pipeline",
+  "version": "3.0",
+  "json_schema": "http://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "id": "elyra-auto-generated-pipeline",
+  "primary_pipeline": "primary",
+  "pipelines": [
+    {
+      "id": "primary",
+      "nodes": [
+        {
+          "id": "d3109ac6-3de5-45dc-9227-344ac4f1bb2d",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "dependencies": [
+                "templates/incident_date_template.txt"
+              ],
+              "include_subdirectories": false,
+              "outputs": [],
+              "env_vars": [
+                {
+                  "env_var": "ENTITY_TO_PROCES",
+                  "value": "incident_date"
+                }
+              ],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "generic_entity_filter.ipynb"
+            },
+            "label": "get_incident_date",
+            "ui_data": {
+              "label": "get_incident_date",
+              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "x_pos": 290,
+              "y_pos": 50,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "049d666d-c1f3-49f7-b870-b6bdf8bbc3f4",
+                  "node_id_ref": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "5db999b9-eafc-451f-84f7-e26bc5bc9792",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "dependencies": [
+                "templates/incident_location_template.txt"
+              ],
+              "include_subdirectories": false,
+              "outputs": [],
+              "env_vars": [
+                {
+                  "env_var": "ENTITY_TO_PROCES",
+                  "value": "incident_location"
+                }
+              ],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "generic_entity_filter.ipynb"
+            },
+            "label": "get_incident_location",
+            "ui_data": {
+              "label": "get_incident_location",
+              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "x_pos": 290,
+              "y_pos": 165,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "e6f83554-6207-4426-bc14-f882715ef2f2",
+                  "node_id_ref": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "42e164fd-0f26-405e-bc75-9bc67897fad9",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "dependencies": [
+                "templates/patient_name_template.txt"
+              ],
+              "include_subdirectories": false,
+              "outputs": [],
+              "env_vars": [
+                {
+                  "env_var": "ENTITY_TO_PROCES",
+                  "value": "patient_name"
+                }
+              ],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "generic_entity_filter.ipynb"
+            },
+            "label": "get_patient_name",
+            "ui_data": {
+              "label": "get_patient_name",
+              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "x_pos": 290,
+              "y_pos": 280,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "90122653-377c-43eb-bc75-dc5f234a5686",
+                  "node_id_ref": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "de311b98-c389-45aa-aaf4-c97a43c9ae52",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "dependencies": [
+                "templates/patient_complaints_template.txt"
+              ],
+              "include_subdirectories": false,
+              "outputs": [],
+              "env_vars": [
+                {
+                  "env_var": "ENTITY_TO_PROCES",
+                  "value": "patient_complaints"
+                }
+              ],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "generic_entity_filter.ipynb"
+            },
+            "label": "get_patient_complaints",
+            "ui_data": {
+              "label": "get_patient_complaints",
+              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "x_pos": 290,
+              "y_pos": 395,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "63ed312e-af1c-4767-b022-c1d1ae01c908",
+                  "node_id_ref": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "dependencies": [],
+              "include_subdirectories": false,
+              "outputs": [
+                "unprocessed_incidents.txt"
+              ],
+              "env_vars": [],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "retrieve_unprocessed_incidents.ipynb"
+            },
+            "label": "",
+            "ui_data": {
+              "label": "retrieve_unprocessed_incidents.ipynb",
+              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "x_pos": 50,
+              "y_pos": 222.5,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              }
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "app_data": {
+        "ui_data": {
+          "comments": []
+        },
+        "version": 8,
+        "runtime_type": "KUBEFLOW_PIPELINES",
+        "properties": {
+          "name": "proces-incident-v1.1",
+          "runtime": "Data Science Pipelines",
+          "pipeline_defaults": {
+            "kubernetes_shared_mem_size": {},
+            "kubernetes_pod_labels": [],
+            "kubernetes_tolerations": [],
+            "mounted_volumes": [],
+            "kubernetes_pod_annotations": [],
+            "env_vars": [
+              {
+                "env_var": "DATABASE_NAME",
+                "value": "incidents"
+              },
+              {
+                "env_var": "DATABASE_USER",
+                "value": "dev"
+              },
+              {
+                "env_var": "DATABASE_PASS",
+                "value": "password"
+              },
+              {
+                "env_var": "DATABASE_HOST",
+                "value": "poc-postgress-service.bram-terlouw-dev.svc.cluster.local"
+              },
+              {
+                "env_var": "DATABASE_PORT",
+                "value": "5432"
+              }
+            ],
+            "kubernetes_secrets": [],
+            "runtime_image": "quay.io/modh/runtime-images@sha256:4e3bac6151402e97e79711e262b396eb515e70ca9217a48103a6cfb96a99fde2"
+          },
+          "pipeline_parameters": []
+        }
+      },
+      "runtime_ref": ""
+    }
+  ],
+  "schemas": []
+}

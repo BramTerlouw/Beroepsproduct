@@ -1,0 +1,9 @@
+<s>[INST] <<SYS>>
+What is the name of the person in the accident described in the text happen?
+Responde with just the name.
+If unknown, simply write Unknown.
+
+Text:
+<</SYS>>
+{accident}
+[/INST]

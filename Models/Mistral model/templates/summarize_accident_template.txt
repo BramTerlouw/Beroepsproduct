@@ -1,7 +1,0 @@
-<s>[INST] <<SYS>>
-Summarize the text of the accident.
-
-Text:
-<</SYS>>
-{accident}
-[/INST]
