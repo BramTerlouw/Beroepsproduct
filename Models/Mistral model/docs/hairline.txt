@@ -1,0 +1,68 @@
+Afdeling: Spoedeisende Hulp (SEH)
+Documentnummer: PROT-HF-2024-002
+Versie: 1.0
+Datum: 29 augustus 2024
+Goedkeuring: Dr. L. de Vries, Hoofd Orthopedie
+1. Doelstelling
+Dit document beschrijft het beleid en de procedures voor de behandeling van patiënten
+met een haarscheur (hairline fracture) in het Fictief Ziekenhuis. Het biedt richtlijnen
+gebaseerd op drie prioriteitsfactoren: locatie van de fractuur, pijnniveau en de
+leeftijd/gezondheidsstatus van de patiënt.
+2. Definities
+• Hairline Fracture (Haarscheur): Een kleine, niet-verplaatste breuk in het bot die
+vaak het gevolg is van overbelasting of stress, meestal zichtbaar als een dunne
+lijn op een röntgenfoto.
+• Prioriteitsfactoren: Drie klinische factoren die de behandelbeslissingen sturen:
+locatie, pijnniveau en patiëntkenmerken.
+3. Prioriteitsfactoren en Behandelprotocol
+3.1 Locatie van de Fractuur
+• Hoog Risico Locaties: Heup, femurhals, wervelkolom.
+o Actie: Directe orthopedische evaluatie, röntgenonderzoek en mogelijk
+een MRI om complicaties uit te sluiten. Overweeg bedrust of
+hospitalisatie bij instabiele fracturen.
+• Matig Risico Locaties: Scheenbeen, voet, onderarm.
+o Actie: Beeldvorming met röntgen en eventueel botdichtheidsmeting.
+Behandeling met immobilisatie (gips of brace) en belastingvermijding.
+Follow-up binnen 7 dagen.
+• Laag Risico Locaties: Ribben, vingers, tenen.
+o Actie: Röntgenonderzoek om de diagnose te bevestigen.
+Symptomatische behandeling met pijnstilling en bescherming van het
+gebied. Follow-up op basis van klinische symptomen.
+3.2 Pijnniveau
+• Ernstige Pijn: Patiënt heeft aanzienlijke pijn die niet goed reageert op standaard
+pijnbestrijding.
+o Actie: Overweeg opioïden naast NSAID's voor pijnbestrijding. Bedrust of
+beperkte mobilisatie. Regelmatige pijncontrole en follow-up binnen 48
+uur.
+• Matige Pijn: Pijn aanwezig maar beheersbaar met standaard medicatie.
+o Actie: NSAID's of paracetamol, gips of brace voor immobilisatie. Beperk
+fysieke activiteiten, en plan een follow-up binnen 5-7 dagen.
+• Lichte Pijn: Pijn is mild en interferentie met dagelijkse activiteiten is minimaal.
+o Actie: Symptomatische behandeling met paracetamol, immobilisatie als
+nodig. Advies over belastingvermijding. Follow-up indien symptomen
+aanhouden.
+3.3 Leeftijd en Gezondheidsstatus van de Patiënt
+• Kinderen en Jongeren (tot 18 jaar):
+o Actie: Zorgvuldige evaluatie van de groeischijven. Conservatieve
+behandeling met immobilisatie. Indien nodig, consultatie met
+kinderorthopedie.
+• Volwassenen (18-65 jaar):
+o Actie: Behandeling gebaseerd op locatie en pijnniveau. Revalidatie of
+fysiotherapie wordt overwogen afhankelijk van de fractuur en het
+genezingsproces.
+• Ouderen (>65 jaar) of Patiënten met Comorbiditeiten:
+o Actie: Zorgvuldige monitoring van de genezing vanwege verhoogd risico
+op complicaties. Behandeling in samenspraak met geriatrie of andere
+relevante specialismen. Overweeg aanvullende beeldvorming zoals
+DEXA-scan om osteoporose te evalueren.
+4. Algemeen Beleid
+• Beeldvorming: Alle vermoedelijke haarscheuren moeten worden bevestigd met
+röntgenonderzoek. Bij twijfel kan een MRI of botscan worden overwogen.
+• Pijnbestrijding: Behandel pijn op basis van de ernst en impact op het dagelijks
+leven, variërend van paracetamol tot opioïden.
+• Mobilisatie: Patiënten moeten worden geïnstrueerd om overmatige belasting
+van het aangedane gebied te vermijden totdat genezing is bevestigd.
+5. Documentatie
+Alle stappen in het diagnose- en behandelproces moeten zorgvuldig worden vastgelegd
+in het elektronisch patiëntendossier (EPD), inclusief alle beeldvormingsresultaten,
+pijnbehandeling en follow-up plannen

@@ -1,0 +1,56 @@
+Afdeling: Spoedeisende Hulp (SEH)
+Documentnummer: PROT-AF-2024-001
+Versie: 1.0
+Datum: 29 augustus 2024
+Goedkeuring: Dr. E. Janssen, Hoofd Traumatologie
+1. Doelstelling
+Dit document beschrijft het beleid en de procedures voor de behandeling van patiënten met een
+avulsiefractuur in het Fictief Ziekenhuis. Het biedt richtlijnen gebaseerd op drie prioriteitsfactoren: locatie
+van de fractuur, ernst van de fractuur en de leeftijd/gezondheidsstatus van de patiënt.
+2. Definities
+• Avulsiefractuur: Een breuk waarbij een fragment van het bot wordt losgetrokken door een pees
+of ligament.
+• Prioriteitsfactoren: Drie klinische factoren die de behandelbeslissingen sturen: locatie, ernst en
+patiëntkenmerken.
+3. Prioriteitsfactoren en Behandelprotocol
+3.1 Locatie van de Fractuur
+• Hoog Risico Locaties: Heup, bekken, proximale femur.
+o Actie: Spoedconsult orthopedie, röntgenonderzoek en mogelijk MRI. Overweeg directe
+hospitalisatie.
+• Matig Risico Locaties: Enkel, knie, schouder.
+o Actie: Röntgenonderzoek om de fractuur te bevestigen. Overweeg gips of brace.
+Consultatie orthopedie binnen 24 uur.
+• Laag Risico Locaties: Vingers, tenen.
+o Actie: Röntgenonderzoek, immobilisatie met tape of spalk. Volg binnen een week op via
+polikliniek.
+3.2 Ernst van de Fractuur
+• Ernstige Fracturen: Groot botfragment, significante verplaatsing, of betrokkenheid van een
+gewricht.
+o Actie: Directe orthopedische interventie, mogelijk chirurgische fixatie. Pijnmanagement
+met opioïden en NSAID's.
+• Matige Fracturen: Klein fragment, beperkte verplaatsing.
+o Actie: Immobilisatie met gips of brace, follow-up binnen 48 uur. Overweeg fysiotherapie
+bij herstel.
+• Lichte Fracturen: Minimale verplaatsing, geen gewrichtsbetrokkenheid.
+o Actie: Immobilisatie met tape of spalk, pijnstilling met paracetamol of NSAID's. Follow-
+up in 7 dagen.
+3.3 Leeftijd en Gezondheidsstatus van de Patiënt
+• Kinderen en Jongeren (tot 18 jaar):
+o Actie: Overweeg het risico op groeischijfbetrokkenheid. Consultatie met
+kinderorthopedie indien nodig. Vaak conservatieve behandeling met monitoring.
+• Volwassenen (18-65 jaar):
+o Actie: Behandeling volgens locatie en ernst. Fysiotherapie en revalidatieprogramma
+kunnen noodzakelijk zijn.
+• Ouderen (>65 jaar) of Patiënten met Comorbiditeiten:
+o Actie: Voorzichtige benadering, gezien het verhoogde risico op complicaties. Consult
+met geriatrie indien nodig. Vaak langer hersteltraject en intensieve follow-up.
+4. Algemeen Beleid
+• Beeldvorming: Alle avulsiefracturen moeten bevestigd worden met röntgenonderzoek. MRI of
+CT-scan kan aangevraagd worden bij complexere gevallen.
+• Pijnbestrijding: Toediening van pijnstilling op basis van de ernst van de fractuur en de
+pijnbeleving van de patiënt.
+• Follow-up: Alle patiënten dienen een follow-up afspraak te hebben binnen 7 dagen na initiële
+behandeling om de voortgang te evalueren en eventuele verdere behandeling te plannen.
+5. Documentatie
+Elke behandelingsstap, inclusief beeldvorming, consultaties en pijnmanagement, moet nauwkeurig
+worden gedocumenteerd in het elektronisch patiëntendossier (EPD).
