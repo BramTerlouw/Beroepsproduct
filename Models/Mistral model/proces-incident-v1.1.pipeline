@@ -14,6 +14,9 @@
           "op": "execute-notebook-node",
           "app_data": {
             "component_parameters": {
+              "pipeline_parameters": [
+                "INCIDENT_ID"
+              ],
               "dependencies": [
                 "templates/incident_date_template.txt"
               ],
@@ -36,7 +39,7 @@
             "label": "get_incident_date",
             "ui_data": {
               "label": "get_incident_date",
-              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "image": "/notebook/bram-terlouw-dev/development/static/elyra/notebook.svg",
               "x_pos": 290,
               "y_pos": 50,
               "description": "Run notebook file"
@@ -56,8 +59,8 @@
               },
               "links": [
                 {
-                  "id": "049d666d-c1f3-49f7-b870-b6bdf8bbc3f4",
-                  "node_id_ref": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+                  "id": "9a503579-53ca-4322-929b-06d2e3dc27ef",
+                  "node_id_ref": "6a9a33e4-9163-4d6e-aba5-80a96a8a2fae",
                   "port_id_ref": "outPort"
                 }
               ]
@@ -84,6 +87,9 @@
           "op": "execute-notebook-node",
           "app_data": {
             "component_parameters": {
+              "pipeline_parameters": [
+                "INCIDENT_ID"
+              ],
               "dependencies": [
                 "templates/incident_location_template.txt"
               ],
@@ -106,7 +112,7 @@
             "label": "get_incident_location",
             "ui_data": {
               "label": "get_incident_location",
-              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "image": "/notebook/bram-terlouw-dev/development/static/elyra/notebook.svg",
               "x_pos": 290,
               "y_pos": 165,
               "description": "Run notebook file"
@@ -126,8 +132,8 @@
               },
               "links": [
                 {
-                  "id": "e6f83554-6207-4426-bc14-f882715ef2f2",
-                  "node_id_ref": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+                  "id": "1802df29-cbf7-4d17-9936-850e3b7d85f3",
+                  "node_id_ref": "6a9a33e4-9163-4d6e-aba5-80a96a8a2fae",
                   "port_id_ref": "outPort"
                 }
               ]
@@ -154,6 +160,9 @@
           "op": "execute-notebook-node",
           "app_data": {
             "component_parameters": {
+              "pipeline_parameters": [
+                "INCIDENT_ID"
+              ],
               "dependencies": [
                 "templates/patient_name_template.txt"
               ],
@@ -176,7 +185,7 @@
             "label": "get_patient_name",
             "ui_data": {
               "label": "get_patient_name",
-              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "image": "/notebook/bram-terlouw-dev/development/static/elyra/notebook.svg",
               "x_pos": 290,
               "y_pos": 280,
               "description": "Run notebook file"
@@ -196,8 +205,8 @@
               },
               "links": [
                 {
-                  "id": "90122653-377c-43eb-bc75-dc5f234a5686",
-                  "node_id_ref": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+                  "id": "cbf0c111-9d85-4efa-aca8-c0e2936e554d",
+                  "node_id_ref": "6a9a33e4-9163-4d6e-aba5-80a96a8a2fae",
                   "port_id_ref": "outPort"
                 }
               ]
@@ -224,6 +233,9 @@
           "op": "execute-notebook-node",
           "app_data": {
             "component_parameters": {
+              "pipeline_parameters": [
+                "INCIDENT_ID"
+              ],
               "dependencies": [
                 "templates/patient_complaints_template.txt"
               ],
@@ -246,7 +258,7 @@
             "label": "get_patient_complaints",
             "ui_data": {
               "label": "get_patient_complaints",
-              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "image": "/notebook/bram-terlouw-dev/development/static/elyra/notebook.svg",
               "x_pos": 290,
               "y_pos": 395,
               "description": "Run notebook file"
@@ -266,8 +278,8 @@
               },
               "links": [
                 {
-                  "id": "63ed312e-af1c-4767-b022-c1d1ae01c908",
-                  "node_id_ref": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+                  "id": "40c1d899-0138-40d7-8738-e0dd82828cac",
+                  "node_id_ref": "6a9a33e4-9163-4d6e-aba5-80a96a8a2fae",
                   "port_id_ref": "outPort"
                 }
               ]
@@ -289,16 +301,17 @@
           ]
         },
         {
-          "id": "d8c0e143-ae8b-4f49-a95b-d9b6b9cfb531",
+          "id": "4708803a-0703-468c-8f93-3f7fac505e9d",
           "type": "execution_node",
           "op": "execute-notebook-node",
           "app_data": {
             "component_parameters": {
+              "pipeline_parameters": [
+                "INCIDENT_ID"
+              ],
               "dependencies": [],
               "include_subdirectories": false,
-              "outputs": [
-                "unprocessed_incidents.txt"
-              ],
+              "outputs": [],
               "env_vars": [],
               "kubernetes_pod_annotations": [],
               "kubernetes_pod_labels": [],
@@ -306,12 +319,118 @@
               "kubernetes_shared_mem_size": {},
               "kubernetes_tolerations": [],
               "mounted_volumes": [],
-              "filename": "retrieve_unprocessed_incidents.ipynb"
+              "filename": "generate_advice.ipynb",
+              "memory": 8,
+              "memory_limit": 8
             },
             "label": "",
             "ui_data": {
-              "label": "retrieve_unprocessed_incidents.ipynb",
-              "image": "/notebook/ic-shared-img-det/dev/static/elyra/notebook.svg",
+              "label": "generate_advice.ipynb",
+              "image": "/notebook/bram-terlouw-dev/development/static/elyra/notebook.svg",
+              "x_pos": 530,
+              "y_pos": 222.5,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "d7777225-ea2d-49ee-8ecf-5b42925ed2de",
+                  "node_id_ref": "d3109ac6-3de5-45dc-9227-344ac4f1bb2d",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "141d7c5f-2f58-45a8-833d-eda143b465e9",
+                  "node_id_ref": "5db999b9-eafc-451f-84f7-e26bc5bc9792",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "c0c9d375-55be-4c52-86cf-5440c639e467",
+                  "node_id_ref": "42e164fd-0f26-405e-bc75-9bc67897fad9",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "dad739c1-5520-4cc6-8efc-bff0cb89ba3b",
+                  "node_id_ref": "de311b98-c389-45aa-aaf4-c97a43c9ae52",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "6a9a33e4-9163-4d6e-aba5-80a96a8a2fae",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "pipeline_parameters": [
+                "INCIDENT_ID",
+                "CLASSIFICATION_MODEL_NAME",
+                "MODEL_MESH_URL"
+              ],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "outputs": [],
+              "env_vars": [
+                {
+                  "env_var": "AWS_S3_ENDPOINT",
+                  "value": "http://poc-minio-service:9000"
+                },
+                {
+                  "env_var": "AWS_ACCESS_KEY_ID",
+                  "value": "minio"
+                },
+                {
+                  "env_var": "AWS_SECRET_ACCESS_KEY",
+                  "value": "minio123"
+                },
+                {
+                  "env_var": "AWS_S3_BUCKET",
+                  "value": "images"
+                },
+                {
+                  "env_var": "AWS_DEFAULT_REGION",
+                  "value": "eu-west-1"
+                }
+              ],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "generate_classification.ipynb"
+            },
+            "label": "",
+            "ui_data": {
+              "label": "generate_classification.ipynb",
+              "image": "/notebook/bram-terlouw-dev/development/static/elyra/notebook.svg",
               "x_pos": 50,
               "y_pos": 222.5,
               "description": "Run notebook file"
@@ -345,6 +464,72 @@
               }
             }
           ]
+        },
+        {
+          "id": "09864c08-f7d3-47db-8be2-f047bf269220",
+          "type": "execution_node",
+          "op": "execute-notebook-node",
+          "app_data": {
+            "component_parameters": {
+              "pipeline_parameters": [
+                "INCIDENT_ID"
+              ],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "outputs": [],
+              "env_vars": [],
+              "kubernetes_pod_annotations": [],
+              "kubernetes_pod_labels": [],
+              "kubernetes_secrets": [],
+              "kubernetes_shared_mem_size": {},
+              "kubernetes_tolerations": [],
+              "mounted_volumes": [],
+              "filename": "update_incident_status.ipynb"
+            },
+            "label": "",
+            "ui_data": {
+              "label": "update_incident_status.ipynb",
+              "image": "/notebook/bram-terlouw-dev/development/static/elyra/notebook.svg",
+              "x_pos": 770,
+              "y_pos": 222.5,
+              "description": "Run notebook file"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "58514d75-eab6-4ab9-b582-4327afc0cce3",
+                  "node_id_ref": "4708803a-0703-468c-8f93-3f7fac505e9d",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
         }
       ],
       "app_data": {
@@ -357,11 +542,11 @@
           "name": "proces-incident-v1.1",
           "runtime": "Data Science Pipelines",
           "pipeline_defaults": {
-            "kubernetes_shared_mem_size": {},
-            "kubernetes_pod_labels": [],
-            "kubernetes_tolerations": [],
-            "mounted_volumes": [],
             "kubernetes_pod_annotations": [],
+            "kubernetes_pod_labels": [],
+            "mounted_volumes": [],
+            "kubernetes_tolerations": [],
+            "kubernetes_shared_mem_size": {},
             "env_vars": [
               {
                 "env_var": "DATABASE_NAME",
@@ -385,9 +570,37 @@
               }
             ],
             "kubernetes_secrets": [],
-            "runtime_image": "quay.io/modh/runtime-images@sha256:4e3bac6151402e97e79711e262b396eb515e70ca9217a48103a6cfb96a99fde2"
+            "runtime_image": "quay.io/modh/runtime-images@sha256:a2f09f6095e3ba6bc6cf3b8d702fcdd4814f9d4c43e076795bfcdeb334ef9978"
           },
-          "pipeline_parameters": []
+          "pipeline_parameters": [
+            {
+              "name": "INCIDENT_ID",
+              "description": "The ID of the incident to be configured.",
+              "default_value": {
+                "type": "Integer",
+                "value": ""
+              },
+              "required": true
+            },
+            {
+              "name": "CLASSIFICATION_MODEL_NAME",
+              "description": "The name of the classification model.",
+              "default_value": {
+                "type": "String",
+                "value": ""
+              },
+              "required": true
+            },
+            {
+              "name": "MODEL_MESH_URL",
+              "description": "The url of the model mesh in which the classification model is deployed.",
+              "default_value": {
+                "type": "String",
+                "value": ""
+              },
+              "required": true
+            }
+          ]
         }
       },
       "runtime_ref": ""
