@@ -1,7 +1,6 @@
 <s>[INST] <<SYS>>
 What time and date did the accident described in the text happen?
 Responde with just the time and date.
-Respond in dutch.
 If unknown, simply write Unknown.
 
 Text:

@@ -1,7 +1,6 @@
 <s>[INST] <<SYS>>
 What was the location of the the accident decribed in the text?
 Responde with just the location of the accident.
-Respond in dutch.
 If unknown, simply write Unknown.
 
 Text:

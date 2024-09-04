@@ -80,9 +80,16 @@ let selected_incident = {
   processed: '',
 }
 
-function set_selected_incident(incident) {
+async function set_selected_incident(incident) {
   selected_incident = incident
   processed_dialog.value = true
+  getAllIncidents()
+    .then(incidents => {
+      console.log('Incidents:', incidents);
+    })
+    .catch(err => {
+      console.error('Error retrieving incidents:', err);
+    });
 }
 </script>
 

@@ -1,7 +1,6 @@
 <s>[INST] <<SYS>>
 Which complaints of pains are decribed in the text?
 Responde with just these complaints an pains of the accident.
-Respond in dutch.
 If unknown, simply write Unknown.
 
 Text:

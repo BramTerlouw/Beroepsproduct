@@ -24,6 +24,35 @@ const incidents = [
   }
 ]
 
+let processed_incident = {
+  id: '001',
+  name: 'Mark Jansen',
+  date: '27 augustus 2024, 14:30',
+  location: 'Schouwseweg, vlakbij het park aan de rand van het dorp.',
+  complaints: 'De patient ervaart ernstige pijn in zijn zij en heeft moeite met ademhalen.',
+  advice: 'De patiënt moet met spoed gecheckt worden op long trauma en daarna naar de gips arts.',
+  classification: 'Avulsion fracture',
+  description: 'Op 27 augustus 2024 omstreeks 14:30 uur heeft er een ongeval plaatsgevonden op de fietsroute langs de Schouwseweg, vlakbij het park aan de rand van het dorp. De betrokken persoon, Mark Jansen, een 35-jarige man, is gevallen terwijl hij op zijn fiets reed. Bij aankomst van de hulpdiensten klaagde Mark over ernstige pijn in zijn zij en had hij moeite met ademhalen. Er zijn geen verdere details over de aard van de verwondingen op dit moment, maar de hulpdiensten hebben hem met spoed naar het ziekenhuis vervoerd voor nader onderzoek en behandeling.',
+  processed: 'processed',
+}
+
+let selected_incident = {
+  id: '',
+  name: '',
+  date: '',
+  location: '',
+  complaints: '',
+  advice: '',
+  classification: '',
+  description: '',
+  processed: '',
+}
+
+function set_selected_incident(incident) {
+  selected_incident = incident
+  processed_dialog.value = true
+}
+
 const processed_dialog = shallowRef(false)
 </script>
 
@@ -45,7 +74,7 @@ const processed_dialog = shallowRef(false)
         </template>
 
         <template v-slot:append>
-          <v-btn @click="processed_dialog = true" color="blue" icon="mdi-arrow-right-bold-circle-outline"
+          <v-btn @click="set_selected_incident(processed_incident)" color="blue" icon="mdi-arrow-right-bold-circle-outline"
                  variant="text"></v-btn>
         </template>
       </v-list-item>
@@ -76,7 +105,7 @@ const processed_dialog = shallowRef(false)
                     clearable
                     no-resize
                     hide-details
-                    model-value="Op 27 augustus 2024 omstreeks 14:30 uur heeft er een ongeval plaatsgevonden op de fietsroute langs de Schouwseweg, vlakbij het park aan de rand van het dorp. De betrokken persoon, Mark Jansen, een 35-jarige man, is gevallen terwijl hij op zijn fiets reed. Bij aankomst van de hulpdiensten klaagde Mark over ernstige pijn in zijn zij en had hij moeite met ademhalen. Er zijn geen verdere details over de aard van de verwondingen op dit moment, maar de hulpdiensten hebben hem met spoed naar het ziekenhuis vervoerd voor nader onderzoek en behandeling."
+                    :model-value="selected_incident.description"
                     variant="solo-filled"
                   ></v-textarea>
                 </div>

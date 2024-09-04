@@ -115,3 +115,16 @@ spec:
     app: poc-postgress
   sessionAffinity: None
   type: ClusterIP
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: poc-postgress-route
+  labels:
+    app: poc-postgress
+spec:
+  port:
+    targetPort: 5432
+  to:
+    kind: Service
+    name: poc-postgress-service
