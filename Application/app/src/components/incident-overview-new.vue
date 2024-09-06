@@ -1,72 +1,16 @@
 <script setup>
-import { shallowRef } from 'vue'
+import { onMounted, ref, shallowRef } from 'vue'
+import axios from 'axios'
 
-const processed = [
-  {
-    color: 'green',
-    icon: 'mdi-check',
-    subtitle: 'Jan 20, 2014',
-    title: 'Incident Bram Terlouw'
-  },
-  {
-    color: 'green',
-    icon: 'mdi-check',
-    subtitle: 'Jan 10, 2014',
-    title: 'Incident Frank Dersjant'
-  }
-]
-
-const processing = [
-  {
-    color: 'orange',
-    icon: 'mdi-progress-alert',
-    subtitle: 'Unkown',
-    title: 'Incident_003'
-  }
-]
-
-const unprocessed = [
-  {
-    color: 'red',
-    icon: 'mdi-alert-circle-outline',
-    subtitle: 'Unknown',
-    title: 'Incident_004'
-  },
-  {
-    color: 'red',
-    icon: 'mdi-alert-circle-outline',
-    subtitle: 'Unknown',
-    title: 'Incident_005'
-  }
-]
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
 const description = shallowRef(false)
 const processed_dialog = shallowRef(false)
 const start_process_dialog = shallowRef(false)
 
-let processed_incident = {
-  id: '001',
-  name: 'Mark Jansen',
-  date: '27 augustus 2024, 14:30',
-  location: 'Schouwseweg, vlakbij het park aan de rand van het dorp.',
-  complaints: 'De patient ervaart ernstige pijn in zijn zij en heeft moeite met ademhalen.',
-  advice: 'De patiënt moet met spoed gecheckt worden op long trauma en daarna naar de gips arts.',
-  classification: 'Avulsion fracture',
-  description: 'Op 27 augustus 2024 omstreeks 14:30 uur heeft er een ongeval plaatsgevonden op de fietsroute langs de Schouwseweg, vlakbij het park aan de rand van het dorp. De betrokken persoon, Mark Jansen, een 35-jarige man, is gevallen terwijl hij op zijn fiets reed. Bij aankomst van de hulpdiensten klaagde Mark over ernstige pijn in zijn zij en had hij moeite met ademhalen. Er zijn geen verdere details over de aard van de verwondingen op dit moment, maar de hulpdiensten hebben hem met spoed naar het ziekenhuis vervoerd voor nader onderzoek en behandeling.',
-  processed: 'processed',
-}
-
-let unprocessed_incident = {
-  id: '005',
-  name: '',
-  date: '',
-  location: '',
-  complaints: '',
-  advice: '',
-  classification: '',
-  description: 'Op 27 augustus 2024 omstreeks 14:30 uur heeft er een ongeval plaatsgevonden op de fietsroute langs de Schouwseweg, vlakbij het park aan de rand van het dorp. De betrokken persoon, Mark Jansen, een 35-jarige man, is gevallen terwijl hij op zijn fiets reed. Bij aankomst van de hulpdiensten klaagde Mark over ernstige pijn in zijn zij en had hij moeite met ademhalen. Er zijn geen verdere details over de aard van de verwondingen op dit moment, maar de hulpdiensten hebben hem met spoed naar het ziekenhuis vervoerd voor nader onderzoek en behandeling.',
-  processed: 'unprocessed',
-}
+let processed = ref([])
+let processing = ref([])
+let unprocessed = ref([])
 
 let selected_incident = {
   id: '',
@@ -80,16 +24,63 @@ let selected_incident = {
   processed: '',
 }
 
+async function getIncidents() {
+  try {
+    const response = await axios.get('http://poc-postgresql-server-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/incidents');
+    const data = response.data;
+
+    const statusMapping = {
+      unprocessed: { color: 'red', icon: 'mdi-alert-circle-outline' },
+      in_progress: { color: 'orange', icon: 'mdi-progress-alert' },
+      processed: { color: 'green', icon: 'mdi-check' }
+    };
+
+    data.forEach((item) => {
+      const commonFields = {
+        id: item.id,
+        title: 'Incident_' + item.id,
+        name: item.patient_name || 'Unknown',
+        date: item.incident_date || 'Unknown',
+        location: item.incident_location || 'Unknown',
+        complaints: item.patient_complaints || 'Unknown',
+        advice: item.advice || 'Unknown',
+        classification: item.fracture_classification || 'Unknown',
+        description: item.description,
+        status: item.incident_status
+      };
+
+      const formattedItem = {
+        ...commonFields,
+        ...statusMapping[item.incident_status]
+      }
+
+      switch (formattedItem.status) {
+        case 'unprocessed':
+          unprocessed.value.push(formattedItem);
+          break;
+        case 'in_progress':
+          processing.value.push(formattedItem);
+          break;
+        case 'processed':
+          processed.value.push(formattedItem);
+          break;
+        default:
+          console.warn(`Unknown status: ${item.status}`, item);
+      }
+    })
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+onMounted(() => {
+  getIncidents()
+})
+
 async function set_selected_incident(incident) {
   selected_incident = incident
   processed_dialog.value = true
-  getAllIncidents()
-    .then(incidents => {
-      console.log('Incidents:', incidents);
-    })
-    .catch(err => {
-      console.error('Error retrieving incidents:', err);
-    });
 }
 </script>
 
@@ -104,9 +95,9 @@ async function set_selected_incident(incident) {
       <v-list-subheader inset>Processed Incidents</v-list-subheader>
 
       <v-list-item
-        v-for="file in processed"
+        v-for="(file, index) in processed"
         :key="file.title"
-        :subtitle="file.subtitle"
+        :subtitle="file.date"
         :title="file.title"
       >
         <template v-slot:prepend>
@@ -120,7 +111,7 @@ async function set_selected_incident(incident) {
             color="blue"
             icon="mdi-arrow-right-bold-circle-outline"
             variant="text"
-            @click="set_selected_incident(processed_incident)"
+            @click="set_selected_incident(processed[index])"
           ></v-btn>
         </template>
       </v-list-item>
@@ -132,7 +123,7 @@ async function set_selected_incident(incident) {
       <v-list-item
         v-for="file in processing"
         :key="file.title"
-        :subtitle="file.subtitle"
+        :subtitle="file.date"
         :title="file.title"
       >
         <template v-slot:prepend>
@@ -156,9 +147,9 @@ async function set_selected_incident(incident) {
       <v-list-subheader inset>Unprocessed Incidents</v-list-subheader>
 
       <v-list-item
-        v-for="file in unprocessed"
+        v-for="(file, index) in unprocessed"
         :key="file.title"
-        :subtitle="file.subtitle"
+        :subtitle="file.date"
         :title="file.title"
       >
         <template v-slot:prepend>
@@ -176,7 +167,7 @@ async function set_selected_incident(incident) {
             :disabled="false"
           ></v-btn>
           <v-btn
-            @click="set_selected_incident(unprocessed_incident)"
+            @click="set_selected_incident(unprocessed[index])"
             color="blue"
             icon="mdi-arrow-right-bold-circle-outline"
             variant="text"

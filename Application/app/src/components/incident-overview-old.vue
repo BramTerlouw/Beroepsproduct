@@ -1,40 +1,8 @@
 <script setup>
-import { shallowRef } from 'vue'
+import { onMounted, ref, shallowRef } from 'vue'
+import axios from 'axios'
 
-const incidents = [
-  {
-    color: 'blue',
-    icon: 'mdi-information-outline',
-    title: 'Incident_001'
-  },
-  {
-    color: 'blue',
-    icon: 'mdi-information-outline',
-    title: 'Incident_002'
-  },
-  {
-    color: 'blue',
-    icon: 'mdi-information-outline',
-    title: 'Incident_003'
-  },
-  {
-    color: 'blue',
-    icon: 'mdi-information-outline',
-    title: 'Incident_004'
-  }
-]
-
-let processed_incident = {
-  id: '001',
-  name: 'Mark Jansen',
-  date: '27 augustus 2024, 14:30',
-  location: 'Schouwseweg, vlakbij het park aan de rand van het dorp.',
-  complaints: 'De patient ervaart ernstige pijn in zijn zij en heeft moeite met ademhalen.',
-  advice: 'De patiënt moet met spoed gecheckt worden op long trauma en daarna naar de gips arts.',
-  classification: 'Avulsion fracture',
-  description: 'Op 27 augustus 2024 omstreeks 14:30 uur heeft er een ongeval plaatsgevonden op de fietsroute langs de Schouwseweg, vlakbij het park aan de rand van het dorp. De betrokken persoon, Mark Jansen, een 35-jarige man, is gevallen terwijl hij op zijn fiets reed. Bij aankomst van de hulpdiensten klaagde Mark over ernstige pijn in zijn zij en had hij moeite met ademhalen. Er zijn geen verdere details over de aard van de verwondingen op dit moment, maar de hulpdiensten hebben hem met spoed naar het ziekenhuis vervoerd voor nader onderzoek en behandeling.',
-  processed: 'processed',
-}
+const incidents = ref([])
 
 let selected_incident = {
   id: '',
@@ -47,6 +15,31 @@ let selected_incident = {
   description: '',
   processed: '',
 }
+
+async function getIncidents() {
+  try {
+    const response = await axios.get('http://poc-postgresql-server-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/api/incidents');
+    const data = response.data;
+
+    data.forEach((item) => {
+      const incident = {
+        id: item.id,
+        description: item.description,
+        color: 'blue',
+        icon: 'mdi-information-outline',
+        title: 'Incident_' + item.id
+      };
+      incidents.value.push(incident);
+    })
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+onMounted(() => {
+  getIncidents()
+})
 
 function set_selected_incident(incident) {
   selected_incident = incident
@@ -66,7 +59,7 @@ const processed_dialog = shallowRef(false)
     <v-list lines="two">
       <v-list-subheader inset>Incidents</v-list-subheader>
 
-      <v-list-item v-for="file in incidents" :key="file.title" :title="file.title">
+      <v-list-item v-for="(file, index) in incidents" :key="file.title" :title="file.title">
         <template v-slot:prepend>
           <v-avatar :color="file.color">
             <v-icon color="white">{{ file.icon }}</v-icon>
@@ -74,7 +67,7 @@ const processed_dialog = shallowRef(false)
         </template>
 
         <template v-slot:append>
-          <v-btn @click="set_selected_incident(processed_incident)" color="blue" icon="mdi-arrow-right-bold-circle-outline"
+          <v-btn @click="set_selected_incident(incidents[index])" color="blue" icon="mdi-arrow-right-bold-circle-outline"
                  variant="text"></v-btn>
         </template>
       </v-list-item>
