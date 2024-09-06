@@ -7,6 +7,7 @@ const port = 3000;
 
 const s3Client = new Minio.Client({
     endPoint: 'poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com',
+    useSSL: true,
     accessKey: 'minio',
     secretKey: 'minio123',
   })

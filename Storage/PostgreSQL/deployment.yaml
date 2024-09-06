@@ -115,19 +115,20 @@ spec:
     app: poc-postgress
   sessionAffinity: None
   type: ClusterIP
-
-# kind: Service
-# apiVersion: v1
-# metadata:
-#   # namespace: poc-postgress
-#   name: poc-postgress-service
-# spec:
-#   type: LoadBalancer
-#   ports:
-#   - name: api
-#     protocol: TCP
-#     port: 5432
-#     targetPort: 5432
-#   selector:
-#     app: poc-postgress
-#   sessionAffinity: None
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  # namespace: poc-minio
+  name: poc-postgress-route
+spec:
+  to:
+    kind: Service
+    name: poc-postgress-service
+    weight: 100
+  port:
+    targetPort: api
+  wildcardPolicy: None
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
