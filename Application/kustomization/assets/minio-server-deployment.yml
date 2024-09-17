@@ -1,0 +1,24 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: poc-minio-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: poc-minio-server
+      app: poc-minio-server
+  template:
+    metadata:
+      labels:
+        name: poc-minio-server
+        app: poc-minio-server
+    spec:
+      containers:
+        - name: poc-minio-serger-container
+          image: poc-minio-server-image
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              memory: "250Mi"

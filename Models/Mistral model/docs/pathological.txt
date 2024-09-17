@@ -1,0 +1,50 @@
+Department: Emergency Department (ED)
+Document Number: PROT-AF-2024-008
+Version: 1.0
+Date: September 17, 2024
+Approval: Dr. E. Janssen, Head of Trauma Surgery
+1. Objective
+
+This document outlines the policy and procedures for the treatment of patients with a pathological fracture at Fictitious Hospital. It provides guidelines based on three priority factors: location of the fracture, severity of the fracture, and the patient’s age/health status.
+2. Definitions
+
+    Pathological Fracture: A fracture that occurs in a bone weakened by an underlying disease, such as osteoporosis, cancer, or metabolic bone disorders. The fracture happens with minimal or no trauma.
+    Priority Factors: Three clinical factors guiding treatment decisions: location, severity, and patient characteristics.
+
+3. Priority Factors and Treatment Protocol
+3.1 Location of the Fracture
+
+    High-Risk Locations: Spine, pelvis, femur.
+        Action: Immediate orthopedics consultation and X-ray examination. Consider MRI or CT scan for detailed assessment, especially to evaluate underlying pathology. Stabilization and possible surgical intervention depending on the extent of the underlying condition.
+    Moderate-Risk Locations: Humerus, tibia, radius.
+        Action: X-ray to confirm the fracture. Additional imaging as needed to assess underlying pathology. Reduction and immobilization with a cast or splint. Orthopedics consultation within 24 hours to determine further management and treatment.
+    Low-Risk Locations: Metacarpals, phalanges.
+        Action: X-ray to confirm the fracture. Immobilization with a splint or tape. Follow-up within a week at the outpatient clinic to monitor healing and evaluate the underlying condition.
+
+3.2 Severity of the Fracture
+
+    Severe Pathological Fractures: Extensive fractures with significant displacement or involvement of the underlying disease affecting multiple areas.
+        Action: Immediate reduction and stabilization, often requiring surgical intervention. Pain management with opioids and NSAIDs. Multidisciplinary team consultation to address the underlying disease and plan comprehensive treatment.
+    Moderate Pathological Fractures: Noticeable fractures with some displacement but manageable with less extensive involvement of the underlying condition.
+        Action: Reduction and immobilization with a cast or brace. Follow-up within 48 hours to monitor alignment, healing, and underlying condition. Additional imaging or treatment adjustments may be required.
+    Minor Pathological Fractures: Minor fractures with minimal displacement, potentially affecting less critical areas.
+        Action: Immobilization with a splint or tape, pain relief with acetaminophen or NSAIDs. Follow-up in 7 days to assess healing and ongoing management of the underlying disease.
+
+3.3 Age and Health Status of the Patient
+
+    Children and Adolescents (up to 18 years):
+        Action: Rare for pathological fractures; if present, evaluate for underlying bone diseases or conditions. Consult with pediatric orthopedics and relevant specialists. Conservative treatment with careful monitoring.
+    Adults (18-65 years):
+        Action: Treatment based on fracture location and severity, considering the underlying condition. May require surgery and coordination with specialists for managing the underlying disease. Follow-up to ensure proper healing and disease management.
+    Elderly (>65 years) or Patients with Comorbidities:
+        Action: Cautious approach due to increased risk of complications and the impact of underlying conditions. Consult with geriatrics and relevant specialists. Intensive follow-up and comprehensive management of the underlying disease and fracture healing.
+
+4. General Policy
+
+    Imaging: All pathological fractures must be confirmed with X-ray examination. MRI or CT scan may be necessary to assess the extent of the underlying condition and to guide treatment.
+    Pain Management: Provide pain relief based on the severity of the fracture and the patient’s pain experience. Opioids may be used for severe pain, along with NSAIDs for moderate pain.
+    Follow-up: Patients should have a follow-up appointment within 7 days of initial treatment to evaluate healing and manage the underlying condition. Additional follow-ups may be required based on fracture complexity and disease management.
+
+5. Documentation
+
+All treatment steps, including imaging, reduction procedures, consultations, and pain management, must be thoroughly documented in the electronic patient record (EPR). Ensure all data is complete and timely to support ongoing care and follow-up.

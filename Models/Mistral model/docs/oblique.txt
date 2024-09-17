@@ -1,0 +1,50 @@
+Department: Emergency Department (ED)
+Document Number: PROT-AF-2024-007
+Version: 1.0
+Date: September 17, 2024
+Approval: Dr. E. Janssen, Head of Trauma Surgery
+1. Objective
+
+This document outlines the policy and procedures for the treatment of patients with an oblique fracture at Fictitious Hospital. It provides guidelines based on three priority factors: location of the fracture, severity of the fracture, and the patient’s age/health status.
+2. Definitions
+
+    Oblique Fracture: A type of bone fracture characterized by a diagonal break across the bone, typically resulting from angled trauma or forces applied in a direction other than perpendicular to the bone’s axis.
+    Priority Factors: Three clinical factors guiding treatment decisions: location, severity, and patient characteristics.
+
+3. Priority Factors and Treatment Protocol
+3.1 Location of the Fracture
+
+    High-Risk Locations: Femur, tibia, humerus.
+        Action: Immediate orthopedics consultation and X-ray examination. Consider MRI or CT scan for detailed assessment if needed. Reduction and stabilization, often requiring casting or surgical intervention to ensure proper alignment and healing.
+    Moderate-Risk Locations: Radius, ulna, fibula.
+        Action: X-ray to confirm the fracture. Reduction and immobilization with a cast or splint. Orthopedics consultation within 24 hours for evaluation and potential additional treatment.
+    Low-Risk Locations: Metacarpals, phalanges.
+        Action: X-ray to confirm the fracture. Immobilization with a splint or tape. Follow-up within a week at the outpatient clinic.
+
+3.2 Severity of the Fracture
+
+    Severe Oblique Fractures: Extensive diagonal fracture with significant displacement or involvement of adjacent soft tissues or joints.
+        Action: Immediate reduction and stabilization, often requiring surgical intervention and possible internal fixation. Pain management with opioids and NSAIDs. Multidisciplinary consultation may be necessary for complex cases.
+    Moderate Oblique Fractures: Notable diagonal fracture with some displacement but without severe joint or soft tissue involvement.
+        Action: Reduction and immobilization with cast or brace. Follow-up within 48 hours to monitor alignment and healing. Additional imaging may be considered if complications arise.
+    Minor Oblique Fractures: Minor diagonal fracture with limited displacement.
+        Action: Immobilization with a splint or tape, pain relief with acetaminophen or NSAIDs. Follow-up in 7 days to assess healing and alignment.
+
+3.3 Age and Health Status of the Patient
+
+    Children and Adolescents (up to 18 years):
+        Action: Monitor for potential impact on growth and bone development. Consult with pediatric orthopedics if needed. Conservative treatment with cast or splint and regular follow-up to assess growth and healing.
+    Adults (18-65 years):
+        Action: Treatment based on location and severity of the fracture. May include casting, splinting, and possible surgery. Follow-up to ensure proper alignment, healing, and functional recovery.
+    Elderly (>65 years) or Patients with Comorbidities:
+        Action: Cautious approach due to increased risk of complications and slower healing. Consult with geriatrics if needed. Intensive follow-up and potential adjustments in treatment based on recovery progress.
+
+4. General Policy
+
+    Imaging: All oblique fractures must be confirmed with X-ray examination. MRI or CT scan may be necessary for detailed assessment of complex cases or to evaluate soft tissue involvement.
+    Pain Management: Provide pain relief based on the severity of the fracture and the patient’s pain experience. Opioids may be used for severe pain, along with NSAIDs for moderate pain.
+    Follow-up: Patients should have a follow-up appointment within 7 days of initial treatment to evaluate healing and alignment. Additional follow-ups may be required based on the complexity of the fracture and recovery progress.
+
+5. Documentation
+
+All treatment steps, including imaging, reduction procedures, consultations, and pain management, must be meticulously documented in the electronic patient record (EPR). Ensure all data is complete and timely to support ongoing care and follow-up.

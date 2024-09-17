@@ -1,68 +1,50 @@
-Afdeling: Spoedeisende Hulp (SEH)
-Documentnummer: PROT-HF-2024-002
-Versie: 1.0
-Datum: 29 augustus 2024
-Goedkeuring: Dr. L. de Vries, Hoofd Orthopedie
-1. Doelstelling
-Dit document beschrijft het beleid en de procedures voor de behandeling van patiënten
-met een haarscheur (hairline fracture) in het Fictief Ziekenhuis. Het biedt richtlijnen
-gebaseerd op drie prioriteitsfactoren: locatie van de fractuur, pijnniveau en de
-leeftijd/gezondheidsstatus van de patiënt.
-2. Definities
-• Hairline Fracture (Haarscheur): Een kleine, niet-verplaatste breuk in het bot die
-vaak het gevolg is van overbelasting of stress, meestal zichtbaar als een dunne
-lijn op een röntgenfoto.
-• Prioriteitsfactoren: Drie klinische factoren die de behandelbeslissingen sturen:
-locatie, pijnniveau en patiëntkenmerken.
-3. Prioriteitsfactoren en Behandelprotocol
-3.1 Locatie van de Fractuur
-• Hoog Risico Locaties: Heup, femurhals, wervelkolom.
-o Actie: Directe orthopedische evaluatie, röntgenonderzoek en mogelijk
-een MRI om complicaties uit te sluiten. Overweeg bedrust of
-hospitalisatie bij instabiele fracturen.
-• Matig Risico Locaties: Scheenbeen, voet, onderarm.
-o Actie: Beeldvorming met röntgen en eventueel botdichtheidsmeting.
-Behandeling met immobilisatie (gips of brace) en belastingvermijding.
-Follow-up binnen 7 dagen.
-• Laag Risico Locaties: Ribben, vingers, tenen.
-o Actie: Röntgenonderzoek om de diagnose te bevestigen.
-Symptomatische behandeling met pijnstilling en bescherming van het
-gebied. Follow-up op basis van klinische symptomen.
-3.2 Pijnniveau
-• Ernstige Pijn: Patiënt heeft aanzienlijke pijn die niet goed reageert op standaard
-pijnbestrijding.
-o Actie: Overweeg opioïden naast NSAID's voor pijnbestrijding. Bedrust of
-beperkte mobilisatie. Regelmatige pijncontrole en follow-up binnen 48
-uur.
-• Matige Pijn: Pijn aanwezig maar beheersbaar met standaard medicatie.
-o Actie: NSAID's of paracetamol, gips of brace voor immobilisatie. Beperk
-fysieke activiteiten, en plan een follow-up binnen 5-7 dagen.
-• Lichte Pijn: Pijn is mild en interferentie met dagelijkse activiteiten is minimaal.
-o Actie: Symptomatische behandeling met paracetamol, immobilisatie als
-nodig. Advies over belastingvermijding. Follow-up indien symptomen
-aanhouden.
-3.3 Leeftijd en Gezondheidsstatus van de Patiënt
-• Kinderen en Jongeren (tot 18 jaar):
-o Actie: Zorgvuldige evaluatie van de groeischijven. Conservatieve
-behandeling met immobilisatie. Indien nodig, consultatie met
-kinderorthopedie.
-• Volwassenen (18-65 jaar):
-o Actie: Behandeling gebaseerd op locatie en pijnniveau. Revalidatie of
-fysiotherapie wordt overwogen afhankelijk van de fractuur en het
-genezingsproces.
-• Ouderen (>65 jaar) of Patiënten met Comorbiditeiten:
-o Actie: Zorgvuldige monitoring van de genezing vanwege verhoogd risico
-op complicaties. Behandeling in samenspraak met geriatrie of andere
-relevante specialismen. Overweeg aanvullende beeldvorming zoals
-DEXA-scan om osteoporose te evalueren.
-4. Algemeen Beleid
-• Beeldvorming: Alle vermoedelijke haarscheuren moeten worden bevestigd met
-röntgenonderzoek. Bij twijfel kan een MRI of botscan worden overwogen.
-• Pijnbestrijding: Behandel pijn op basis van de ernst en impact op het dagelijks
-leven, variërend van paracetamol tot opioïden.
-• Mobilisatie: Patiënten moeten worden geïnstrueerd om overmatige belasting
-van het aangedane gebied te vermijden totdat genezing is bevestigd.
-5. Documentatie
-Alle stappen in het diagnose- en behandelproces moeten zorgvuldig worden vastgelegd
-in het elektronisch patiëntendossier (EPD), inclusief alle beeldvormingsresultaten,
-pijnbehandeling en follow-up plannen
+Department: Emergency Department (ED)
+Document Number: PROT-AF-2024-011
+Version: 1.0
+Date: September 17, 2024
+Approval: Dr. E. Janssen, Head of Trauma Surgery
+1. Objective
+
+This document outlines the policy and procedures for the treatment of patients with a hairline fracture at Fictitious Hospital. It provides guidelines based on three priority factors: location of the fracture, severity of the fracture, and the patient’s age/health status.
+2. Definitions
+
+    Hairline Fracture: A type of stress fracture characterized by a thin, partial crack in the bone that may not displace the bone fragments. It is often the result of repetitive stress or minor trauma.
+    Priority Factors: Three clinical factors guiding treatment decisions: location, severity, and patient characteristics.
+
+3. Priority Factors and Treatment Protocol
+3.1 Location of the Fracture
+
+    High-Risk Locations: Femur, tibia, pelvis.
+        Action: X-ray to confirm the fracture. Consider MRI or CT scan for detailed assessment if symptoms persist or if there is suspicion of an underlying condition. Immobilization with a cast or brace. Orthopedics consultation within 24 hours to evaluate and manage treatment.
+    Moderate-Risk Locations: Radius, ulna, fibula.
+        Action: X-ray to confirm the fracture. Immobilization with a cast or splint. Follow-up within 48 hours to monitor progress. MRI or CT scan may be considered if symptoms do not improve or if there is suspicion of further injury.
+    Low-Risk Locations: Metacarpals, phalanges.
+        Action: X-ray to confirm the fracture. Immobilization with a splint or tape. Follow-up in 7 days to monitor healing and alignment. Additional imaging not typically required unless symptoms persist.
+
+3.2 Severity of the Fracture
+
+    Severe Hairline Fractures: Extensive or complex hairline fractures that may be associated with significant pain, swelling, or potential for displacement.
+        Action: Immediate reduction and stabilization if necessary. Pain management with NSAIDs or acetaminophen. Consider surgical intervention if conservative measures fail. Regular follow-up to monitor healing and adjust treatment as needed.
+    Moderate Hairline Fractures: Noticeable hairline fracture with mild to moderate symptoms but no significant displacement.
+        Action: Immobilization with a cast or splint. Pain management with NSAIDs or acetaminophen. Follow-up within 48 hours to assess healing and consider additional imaging if symptoms persist.
+    Minor Hairline Fractures: Minimal symptoms with a slight crack in the bone, typically with no displacement.
+        Action: Immobilization with a splint or tape. Pain relief with acetaminophen or NSAIDs. Follow-up in 7 days to evaluate healing and adjust treatment as needed.
+
+3.3 Age and Health Status of the Patient
+
+    Children and Adolescents (up to 18 years):
+        Action: Monitor for potential impact on growth and bone development. Consult with pediatric orthopedics if needed. Conservative treatment with cast or splint and regular follow-up to ensure proper healing and growth.
+    Adults (18-65 years):
+        Action: Treatment based on fracture location and severity. Immobilization with cast or splint and regular follow-up to monitor healing. Additional imaging or treatment adjustments may be needed based on recovery progress.
+    Elderly (>65 years) or Patients with Comorbidities:
+        Action: Cautious approach due to increased risk of complications and slower healing. Consult with geriatrics if needed. Intensive follow-up and comprehensive management to address fracture healing and potential underlying health issues.
+
+4. General Policy
+
+    Imaging: All hairline fractures must be confirmed with X-ray examination. MRI or CT scan may be necessary for detailed assessment in cases of persistent symptoms or to evaluate for associated injuries.
+    Pain Management: Provide pain relief based on the severity of the fracture and the patient’s pain experience. NSAIDs or acetaminophen are typically used.
+    Follow-up: Patients should have a follow-up appointment within 7 days of initial treatment to evaluate healing and adjust treatment as needed. Additional follow-ups may be required based on the complexity of the fracture and recovery progress.
+
+5. Documentation
+
+All treatment steps, including imaging, reduction procedures, consultations, and pain management, must be thoroughly documented in the electronic patient record (EPR). Ensure all data is complete and timely to support ongoing care and follow-up.

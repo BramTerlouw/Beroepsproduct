@@ -1,0 +1,50 @@
+Department: Emergency Department (ED)
+Document Number: PROT-AF-2024-003
+Version: 1.0
+Date: September 17, 2024
+Approval: Dr. E. Janssen, Head of Trauma Surgery
+1. Objective
+
+This document outlines the policy and procedures for the treatment of patients with a fracture-dislocation at Fictitious Hospital. It provides guidelines based on three priority factors: location of the fracture-dislocation, severity of the fracture-dislocation, and the patient’s age/health status.
+2. Definitions
+
+    Fracture-Dislocation: A condition where a bone is both fractured and displaced from its normal joint position, often involving damage to the surrounding soft tissues, including ligaments and tendons.
+    Priority Factors: Three clinical factors guiding treatment decisions: location, severity, and patient characteristics.
+
+3. Priority Factors and Treatment Protocol
+3.1 Location of the Fracture-Dislocation
+
+    High-Risk Locations: Hip, shoulder, elbow.
+        Action: Immediate orthopedics consultation and X-ray examination. Consider MRI or CT scan for detailed assessment. Urgent reduction and stabilization required, with possible surgical intervention.
+    Moderate-Risk Locations: Ankle, knee, wrist.
+        Action: X-ray to confirm the fracture-dislocation. Immediate reduction and immobilization with cast or splint. Orthopedics consultation within 24 hours for further evaluation and possible surgical fixation.
+    Low-Risk Locations: Fingers, toes.
+        Action: X-ray to confirm the fracture-dislocation. Reduction and immobilization with tape or splint. Follow-up within a week at the outpatient clinic.
+
+3.2 Severity of the Fracture-Dislocation
+
+    Severe Fracture-Dislocations: Significant bone displacement, extensive joint damage, or involvement of multiple joints.
+        Action: Immediate reduction and stabilization, often requiring surgical intervention. Pain management with opioids and NSAIDs. Multidisciplinary team consultation for complex cases.
+    Moderate Fracture-Dislocations: Moderate bone displacement with joint involvement but less extensive damage.
+        Action: Reduction and immobilization with cast or brace, follow-up within 48 hours. Evaluation for potential surgical intervention based on ongoing assessment.
+    Minor Fracture-Dislocations: Minimal bone displacement, limited joint involvement.
+        Action: Reduction and immobilization with tape or splint, pain relief with acetaminophen or NSAIDs. Follow-up in 7 days to monitor healing.
+
+3.3 Age and Health Status of the Patient
+
+    Children and Adolescents (up to 18 years):
+        Action: Consider the risk of growth plate involvement and the need for pediatric orthopedic consultation. Often conservative treatment with careful monitoring of joint development.
+    Adults (18-65 years):
+        Action: Treatment based on the location and severity of the fracture-dislocation. May require surgery and rehabilitation programs. Consider physiotherapy for functional recovery.
+    Elderly (>65 years) or Patients with Comorbidities:
+        Action: Cautious approach due to increased risk of complications and delayed healing. Consult with geriatrics if necessary. Intensive follow-up and potentially a longer rehabilitation period.
+
+4. General Policy
+
+    Imaging: All fracture-dislocations must be confirmed with X-ray examination. MRI or CT scan may be necessary for detailed assessment of complex cases.
+    Pain Management: Provide pain relief based on the severity of the fracture-dislocation and the patient’s pain experience. Consider opioids for severe pain and ensure effective analgesia.
+    Follow-up: Patients should have a follow-up appointment within 7 days of initial treatment to evaluate healing and plan further treatment. Additional follow-ups may be required based on the complexity of the fracture-dislocation and recovery progress.
+
+5. Documentation
+
+All treatment steps, including imaging, reduction procedures, consultations, pain management, and surgical interventions, must be meticulously documented in the electronic patient record (EPR). Ensure all data is complete and entered promptly to support ongoing care and follow-up.

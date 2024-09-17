@@ -1,56 +1,50 @@
-Afdeling: Spoedeisende Hulp (SEH)
-Documentnummer: PROT-AF-2024-001
-Versie: 1.0
-Datum: 29 augustus 2024
-Goedkeuring: Dr. E. Janssen, Hoofd Traumatologie
-1. Doelstelling
-Dit document beschrijft het beleid en de procedures voor de behandeling van patiënten met een
-avulsiefractuur in het Fictief Ziekenhuis. Het biedt richtlijnen gebaseerd op drie prioriteitsfactoren: locatie
-van de fractuur, ernst van de fractuur en de leeftijd/gezondheidsstatus van de patiënt.
-2. Definities
-• Avulsiefractuur: Een breuk waarbij een fragment van het bot wordt losgetrokken door een pees
-of ligament.
-• Prioriteitsfactoren: Drie klinische factoren die de behandelbeslissingen sturen: locatie, ernst en
-patiëntkenmerken.
-3. Prioriteitsfactoren en Behandelprotocol
-3.1 Locatie van de Fractuur
-• Hoog Risico Locaties: Heup, bekken, proximale femur.
-o Actie: Spoedconsult orthopedie, röntgenonderzoek en mogelijk MRI. Overweeg directe
-hospitalisatie.
-• Matig Risico Locaties: Enkel, knie, schouder.
-o Actie: Röntgenonderzoek om de fractuur te bevestigen. Overweeg gips of brace.
-Consultatie orthopedie binnen 24 uur.
-• Laag Risico Locaties: Vingers, tenen.
-o Actie: Röntgenonderzoek, immobilisatie met tape of spalk. Volg binnen een week op via
-polikliniek.
-3.2 Ernst van de Fractuur
-• Ernstige Fracturen: Groot botfragment, significante verplaatsing, of betrokkenheid van een
-gewricht.
-o Actie: Directe orthopedische interventie, mogelijk chirurgische fixatie. Pijnmanagement
-met opioïden en NSAID's.
-• Matige Fracturen: Klein fragment, beperkte verplaatsing.
-o Actie: Immobilisatie met gips of brace, follow-up binnen 48 uur. Overweeg fysiotherapie
-bij herstel.
-• Lichte Fracturen: Minimale verplaatsing, geen gewrichtsbetrokkenheid.
-o Actie: Immobilisatie met tape of spalk, pijnstilling met paracetamol of NSAID's. Follow-
-up in 7 dagen.
-3.3 Leeftijd en Gezondheidsstatus van de Patiënt
-• Kinderen en Jongeren (tot 18 jaar):
-o Actie: Overweeg het risico op groeischijfbetrokkenheid. Consultatie met
-kinderorthopedie indien nodig. Vaak conservatieve behandeling met monitoring.
-• Volwassenen (18-65 jaar):
-o Actie: Behandeling volgens locatie en ernst. Fysiotherapie en revalidatieprogramma
-kunnen noodzakelijk zijn.
-• Ouderen (>65 jaar) of Patiënten met Comorbiditeiten:
-o Actie: Voorzichtige benadering, gezien het verhoogde risico op complicaties. Consult
-met geriatrie indien nodig. Vaak langer hersteltraject en intensieve follow-up.
-4. Algemeen Beleid
-• Beeldvorming: Alle avulsiefracturen moeten bevestigd worden met röntgenonderzoek. MRI of
-CT-scan kan aangevraagd worden bij complexere gevallen.
-• Pijnbestrijding: Toediening van pijnstilling op basis van de ernst van de fractuur en de
-pijnbeleving van de patiënt.
-• Follow-up: Alle patiënten dienen een follow-up afspraak te hebben binnen 7 dagen na initiële
-behandeling om de voortgang te evalueren en eventuele verdere behandeling te plannen.
-5. Documentatie
-Elke behandelingsstap, inclusief beeldvorming, consultaties en pijnmanagement, moet nauwkeurig
-worden gedocumenteerd in het elektronisch patiëntendossier (EPD).
+Department: Emergency Department (ED)
+Document Number: PROT-AF-2024-010
+Version: 1.0
+Date: September 17, 2024
+Approval: Dr. E. Janssen, Head of Trauma Surgery
+1. Objective
+
+This document outlines the policy and procedures for the treatment of patients with an avulsion fracture at Fictitious Hospital. It provides guidelines based on three priority factors: location of the fracture, severity of the fracture, and the patient’s age/health status.
+2. Definitions
+
+    Avulsion Fracture: A type of fracture where a fragment of bone is pulled off by a tendon or ligament due to sudden force or trauma.
+    Priority Factors: Three clinical factors guiding treatment decisions: location, severity, and patient characteristics.
+
+3. Priority Factors and Treatment Protocol
+3.1 Location of the Fracture
+
+    High-Risk Locations: Hip, pelvis, proximal femur.
+        Action: Immediate orthopedics consultation and X-ray examination. Consider MRI or CT scan for detailed assessment if needed. Immediate reduction and stabilization, often requiring surgical intervention to address potential complications and ensure proper alignment.
+    Moderate-Risk Locations: Ankle, knee, shoulder.
+        Action: X-ray to confirm the fracture. Reduction and immobilization with a cast or brace. Orthopedics consultation within 24 hours for further evaluation and possible additional treatment.
+    Low-Risk Locations: Fingers, toes.
+        Action: X-ray to confirm the fracture. Immobilization with a splint or tape. Follow-up within a week at the outpatient clinic to monitor healing and alignment.
+
+3.2 Severity of the Fracture
+
+    Severe Avulsion Fractures: Large bone fragment avulsion with significant displacement or involvement of adjacent soft tissues or joints.
+        Action: Immediate reduction and stabilization, often requiring surgical intervention and possible internal fixation. Pain management with opioids and NSAIDs. Multidisciplinary consultation may be needed for complex cases.
+    Moderate Avulsion Fractures: Noticeable avulsion with some displacement but without severe involvement of joints or soft tissues.
+        Action: Reduction and immobilization with cast or brace. Follow-up within 48 hours to monitor alignment and healing. Additional imaging may be required if complications arise.
+    Minor Avulsion Fractures: Small avulsion with minimal displacement.
+        Action: Immobilization with a splint or tape, pain relief with acetaminophen or NSAIDs. Follow-up in 7 days to assess healing and alignment.
+
+3.3 Age and Health Status of the Patient
+
+    Children and Adolescents (up to 18 years):
+        Action: Monitor for potential impact on growth and bone development. Consult with pediatric orthopedics if needed. Conservative treatment with cast or splint and regular follow-up to ensure proper healing and growth.
+    Adults (18-65 years):
+        Action: Treatment based on fracture location and severity. May include casting, splinting, and possible surgical intervention. Follow-up to ensure proper alignment, healing, and functional recovery.
+    Elderly (>65 years) or Patients with Comorbidities:
+        Action: Cautious approach due to increased risk of complications and slower healing. Consult with geriatrics if needed. Intensive follow-up and comprehensive management to address fracture healing and potential underlying health issues.
+
+4. General Policy
+
+    Imaging: All avulsion fractures must be confirmed with X-ray examination. MRI or CT scan may be necessary for detailed assessment of complex cases or to evaluate soft tissue involvement.
+    Pain Management: Provide pain relief based on the severity of the fracture and the patient’s pain experience. Opioids may be used for severe pain, along with NSAIDs for moderate pain.
+    Follow-up: Patients should have a follow-up appointment within 7 days of initial treatment to evaluate healing and alignment. Additional follow-ups may be required based on the complexity of the fracture and recovery progress.
+
+5. Documentation
+
+All treatment steps, including imaging, reduction procedures, consultations, and pain management, must be thoroughly documented in the electronic patient record (EPR). Ensure all data is complete and timely to support ongoing care and follow-up.

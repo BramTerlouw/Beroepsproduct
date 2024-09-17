@@ -1,0 +1,50 @@
+Department: Emergency Department (ED)
+Document Number: PROT-AF-2024-002
+Version: 1.0
+Date: September 17, 2024
+Approval: Dr. E. Janssen, Head of Trauma Surgery
+1. Objective
+
+This document outlines the policy and procedures for the treatment of patients with a comminuted fracture at Fictitious Hospital. It provides guidelines based on three priority factors: location of the fracture, severity of the fracture, and the patient's age/health status.
+2. Definitions
+
+    Comminuted Fracture: A break in which the bone is shattered into multiple fragments, often due to traumatic impact.
+    Priority Factors: Three clinical factors guiding treatment decisions: location, severity, and patient characteristics.
+
+3. Priority Factors and Treatment Protocol
+3.1 Location of the Fracture
+
+    High-Risk Locations: Hip, pelvis, proximal femur.
+        Action: Immediate orthopedics consultation, X-ray examination, and possible MRI. Consider immediate hospitalization and potential surgical intervention.
+    Moderate-Risk Locations: Ankle, knee, shoulder.
+        Action: X-ray to confirm the fracture. Consider complex casting or external fixation. Orthopedics consultation within 24 hours.
+    Low-Risk Locations: Fingers, toes.
+        Action: X-ray to confirm the fracture. Immobilization with tape or splint, and follow-up within a week at the outpatient clinic.
+
+3.2 Severity of the Fracture
+
+    Severe Comminuted Fractures: Multiple bone fragments, significant displacement, and joint involvement.
+        Action: Immediate orthopedic intervention, often surgical fixation. Pain management with opioids and NSAIDs. Consider multidisciplinary consultation.
+    Moderate Comminuted Fractures: Multiple fragments without significant displacement or joint involvement.
+        Action: Immobilization with cast or brace, follow-up within 48 hours. Evaluate for possible physiotherapy during recovery.
+    Minor Comminuted Fractures: Minimal number of fragments with little displacement, no joint involvement.
+        Action: Immobilization with tape or splint, pain relief with acetaminophen or NSAIDs. Follow-up in 7 days.
+
+3.3 Age and Health Status of the Patient
+
+    Children and Adolescents (up to 18 years):
+        Action: Consider the risk of growth plate involvement. Consultation with pediatric orthopedics if needed. Often conservative treatment with intensive monitoring.
+    Adults (18-65 years):
+        Action: Treatment according to location and severity of the fracture. May require surgery and prolonged rehabilitation programs. Consider physiotherapy.
+    Elderly (>65 years) or Patients with Comorbidities:
+        Action: Cautious approach due to increased risk of complications. Consultation with geriatrics if necessary. Often requires intensive follow-up and possibly a longer recovery trajectory.
+
+4. General Policy
+
+    Imaging: All comminuted fractures must be confirmed with X-ray examination. MRI or CT scan may be requested for more complex cases or preoperative planning.
+    Pain Management: Administer pain relief based on the severity of the fracture and the patient's pain experience. Consider opioids for severe pain.
+    Follow-up: All patients should have a follow-up appointment within 7 days of initial treatment to evaluate progress and plan further treatment. Additional follow-up may be required depending on the complexity of the fracture and treatment.
+
+5. Documentation
+
+Every step of treatment, including imaging, consultations, pain management, and any surgical interventions, must be accurately documented in the electronic patient record (EPR). Ensure that all data is complete and timely for ongoing care and follow-up.

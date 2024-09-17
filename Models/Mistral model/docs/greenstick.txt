@@ -1,0 +1,50 @@
+Department: Emergency Department (ED)
+Document Number: PROT-AF-2024-004
+Version: 1.0
+Date: September 17, 2024
+Approval: Dr. E. Janssen, Head of Trauma Surgery
+1. Objective
+
+This document outlines the policy and procedures for the treatment of patients with a greenstick fracture at Fictitious Hospital. It provides guidelines based on three priority factors: location of the fracture, severity of the fracture, and the patient’s age/health status.
+2. Definitions
+
+    Greenstick Fracture: A type of incomplete fracture typically seen in children where the bone bends and cracks on one side without breaking completely through. It is analogous to bending a green twig.
+    Priority Factors: Three clinical factors guiding treatment decisions: location, severity, and patient characteristics.
+
+3. Priority Factors and Treatment Protocol
+3.1 Location of the Fracture
+
+    High-Risk Locations: Radius, ulna (forearm bones).
+        Action: X-ray examination to confirm the fracture. Consider immobilization with a cast or splint. Orthopedics consultation if there is significant displacement or involvement of the growth plate.
+    Moderate-Risk Locations: Tibia, fibula (lower leg bones).
+        Action: X-ray to confirm the fracture. Immobilization with a cast or splint. Follow-up within 48 hours to monitor alignment and healing.
+    Low-Risk Locations: Clavicle, metacarpals (hand bones).
+        Action: X-ray to confirm the fracture. Immobilization with a sling or tape. Follow-up within a week at the outpatient clinic.
+
+3.2 Severity of the Fracture
+
+    Severe Greenstick Fractures: Significant bending or partial displacement, especially if growth plate is involved.
+        Action: Immediate immobilization with a cast or splint, possible orthopedic consultation for further evaluation. Pain management with acetaminophen or NSAIDs. Regular follow-up to monitor for potential complications.
+    Moderate Greenstick Fractures: Noticeable bending but minimal displacement, no growth plate involvement.
+        Action: Immobilization with a cast or splint, pain relief with acetaminophen or NSAIDs. Follow-up within 48 hours to ensure proper healing.
+    Minor Greenstick Fractures: Minor bending with minimal displacement.
+        Action: Immobilization with tape or a simple splint, pain relief with acetaminophen. Follow-up in 7 days to monitor healing and alignment.
+
+3.3 Age and Health Status of the Patient
+
+    Children and Adolescents (up to 18 years):
+        Action: Monitor for growth plate involvement and potential impact on bone growth. Conservative treatment with cast or splint and regular follow-up to assess bone development and healing.
+    Adults (18-65 years):
+        Action: Treatment based on location and severity of the fracture. Typically managed with casting or splinting and follow-up to ensure proper healing and function.
+    Elderly (>65 years) or Patients with Comorbidities:
+        Action: Cautious approach due to potential for slower healing and complications. Consult with geriatrics if needed. Intensive follow-up and potential adjustments in treatment based on recovery progress.
+
+4. General Policy
+
+    Imaging: All greenstick fractures must be confirmed with X-ray examination. Follow-up imaging may be necessary to assess healing and bone alignment.
+    Pain Management: Administer pain relief based on the severity of the fracture and patient discomfort. Acetaminophen or NSAIDs are typically used.
+    Follow-up: Patients should have a follow-up appointment within 7 days of initial treatment to evaluate progress and plan further treatment. Additional follow-ups may be required based on healing and alignment.
+
+5. Documentation
+
+All treatment steps, including imaging, immobilization procedures, consultations, and pain management, must be thoroughly documented in the electronic patient record (EPR). Ensure all data is complete and timely to support ongoing care and follow-up.

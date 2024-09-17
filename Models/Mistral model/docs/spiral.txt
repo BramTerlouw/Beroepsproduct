@@ -1,0 +1,50 @@
+Department: Emergency Department (ED)
+Document Number: PROT-AF-2024-009
+Version: 1.0
+Date: September 17, 2024
+Approval: Dr. E. Janssen, Head of Trauma Surgery
+1. Objective
+
+This document outlines the policy and procedures for the treatment of patients with a spiral fracture at Fictitious Hospital. It provides guidelines based on three priority factors: location of the fracture, severity of the fracture, and the patient’s age/health status.
+2. Definitions
+
+    Spiral Fracture: A type of bone fracture characterized by a helical or spiral break that encircles the bone, typically resulting from rotational or twisting forces.
+    Priority Factors: Three clinical factors guiding treatment decisions: location, severity, and patient characteristics.
+
+3. Priority Factors and Treatment Protocol
+3.1 Location of the Fracture
+
+    High-Risk Locations: Femur, tibia, humerus.
+        Action: Immediate orthopedics consultation and X-ray examination. Consider MRI or CT scan for detailed assessment if necessary. Reduction and stabilization, often requiring surgical intervention and internal fixation to ensure proper alignment and healing.
+    Moderate-Risk Locations: Radius, ulna, fibula.
+        Action: X-ray to confirm the fracture. Reduction and immobilization with a cast or splint. Orthopedics consultation within 24 hours for further evaluation and potential additional treatment.
+    Low-Risk Locations: Metacarpals, phalanges.
+        Action: X-ray to confirm the fracture. Immobilization with a splint or tape. Follow-up within a week at the outpatient clinic to monitor healing and alignment.
+
+3.2 Severity of the Fracture
+
+    Severe Spiral Fractures: Extensive spiral fracture with significant displacement or involvement of surrounding soft tissues or joints.
+        Action: Immediate reduction and stabilization, often requiring surgical intervention and possible internal fixation. Pain management with opioids and NSAIDs. Multidisciplinary consultation may be necessary for complex cases.
+    Moderate Spiral Fractures: Noticeable spiral fracture with some displacement but without severe involvement of joints or soft tissues.
+        Action: Reduction and immobilization with cast or brace. Follow-up within 48 hours to monitor alignment and healing. Additional imaging may be required if complications arise.
+    Minor Spiral Fractures: Minor spiral fracture with minimal displacement.
+        Action: Immobilization with a splint or tape, pain relief with acetaminophen or NSAIDs. Follow-up in 7 days to assess healing and alignment.
+
+3.3 Age and Health Status of the Patient
+
+    Children and Adolescents (up to 18 years):
+        Action: Conservative treatment with cast or splint, monitoring for potential impact on bone growth and development. Consult with pediatric orthopedics if needed. Regular follow-up to ensure proper healing and growth.
+    Adults (18-65 years):
+        Action: Treatment based on fracture location and severity. May include casting, splinting, and possible surgical intervention. Follow-up to ensure proper healing, alignment, and functional recovery.
+    Elderly (>65 years) or Patients with Comorbidities:
+        Action: Cautious approach due to increased risk of complications and slower healing. Consult with geriatrics if needed. Intensive follow-up and comprehensive management to address fracture healing and potential underlying health issues.
+
+4. General Policy
+
+    Imaging: All spiral fractures must be confirmed with X-ray examination. MRI or CT scan may be necessary for detailed assessment of complex cases or to evaluate soft tissue involvement.
+    Pain Management: Provide pain relief based on the severity of the fracture and the patient’s pain experience. Opioids may be used for severe pain, along with NSAIDs for moderate pain.
+    Follow-up: Patients should have a follow-up appointment within 7 days of initial treatment to evaluate healing and alignment. Additional follow-ups may be required based on the complexity of the fracture and recovery progress.
+
+5. Documentation
+
+All treatment steps, including imaging, reduction procedures, consultations, and pain management, must be thoroughly documented in the electronic patient record (EPR). Ensure all data is complete and timely to support ongoing care and follow-up.
