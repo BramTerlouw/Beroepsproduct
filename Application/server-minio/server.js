@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 const s3Client = new Minio.Client({
-    endPoint: 'poc-minio-api-route-bram-terlouw-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com',
+    endPoint: 'poc-minio-api-route-poc-thesis-bram-terlouw.apps.cluster-nvtcj.sandbox1725.opentlc.com',
     useSSL: true,
     accessKey: 'minio',
     secretKey: 'minio123',

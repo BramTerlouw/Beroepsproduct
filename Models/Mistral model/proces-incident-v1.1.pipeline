@@ -39,7 +39,7 @@
             "label": "get_incident_date",
             "ui_data": {
               "label": "get_incident_date",
-              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "image": "/notebook/poc-thesis-bram-terlouw/testing/static/elyra/notebook.svg",
               "x_pos": 530,
               "y_pos": 50,
               "description": "Run notebook file"
@@ -112,7 +112,7 @@
             "label": "get_incident_location",
             "ui_data": {
               "label": "get_incident_location",
-              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "image": "/notebook/poc-thesis-bram-terlouw/testing/static/elyra/notebook.svg",
               "x_pos": 530,
               "y_pos": 165,
               "description": "Run notebook file"
@@ -185,7 +185,7 @@
             "label": "get_patient_name",
             "ui_data": {
               "label": "get_patient_name",
-              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "image": "/notebook/poc-thesis-bram-terlouw/testing/static/elyra/notebook.svg",
               "x_pos": 530,
               "y_pos": 280,
               "description": "Run notebook file"
@@ -258,7 +258,7 @@
             "label": "get_patient_complaints",
             "ui_data": {
               "label": "get_patient_complaints",
-              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "image": "/notebook/poc-thesis-bram-terlouw/testing/static/elyra/notebook.svg",
               "x_pos": 530,
               "y_pos": 395,
               "description": "Run notebook file"
@@ -310,7 +310,7 @@
                 "incident_id"
               ],
               "dependencies": [
-                "docs"
+                "docs/*"
               ],
               "include_subdirectories": false,
               "outputs": [],
@@ -328,7 +328,7 @@
             "label": "",
             "ui_data": {
               "label": "generate_advice.ipynb",
-              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "image": "/notebook/poc-thesis-bram-terlouw/testing/static/elyra/notebook.svg",
               "x_pos": 770,
               "y_pos": 222.5,
               "description": "Run notebook file"
@@ -432,7 +432,7 @@
             "label": "",
             "ui_data": {
               "label": "generate_classification.ipynb",
-              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "image": "/notebook/poc-thesis-bram-terlouw/testing/static/elyra/notebook.svg",
               "x_pos": 290,
               "y_pos": 222.5,
               "description": "Run notebook file"
@@ -503,7 +503,7 @@
             "label": "set_processed",
             "ui_data": {
               "label": "set_processed",
-              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "image": "/notebook/poc-thesis-bram-terlouw/testing/static/elyra/notebook.svg",
               "x_pos": 1010,
               "y_pos": 222.5,
               "description": "Run notebook file"
@@ -574,7 +574,7 @@
             "label": "set_in_progress",
             "ui_data": {
               "label": "set_in_progress",
-              "image": "/notebook/bram-terlouw-dev/dev/static/elyra/notebook.svg",
+              "image": "/notebook/poc-thesis-bram-terlouw/testing/static/elyra/notebook.svg",
               "x_pos": 50,
               "y_pos": 222.5,
               "description": "Run notebook file"
@@ -620,11 +620,11 @@
           "name": "proces-incident-v1.1",
           "runtime": "Data Science Pipelines",
           "pipeline_defaults": {
-            "kubernetes_pod_annotations": [],
             "kubernetes_tolerations": [],
+            "kubernetes_shared_mem_size": {},
+            "kubernetes_pod_annotations": [],
             "kubernetes_pod_labels": [],
             "mounted_volumes": [],
-            "kubernetes_shared_mem_size": {},
             "env_vars": [
               {
                 "env_var": "DATABASE_NAME",
@@ -640,7 +640,7 @@
               },
               {
                 "env_var": "DATABASE_HOST",
-                "value": "poc-postgress-service.bram-terlouw-dev.svc.cluster.local"
+                "value": "poc-postgress-service.poc-thesis-bram-terlouw.svc.cluster.local"
               },
               {
                 "env_var": "DATABASE_PORT",
