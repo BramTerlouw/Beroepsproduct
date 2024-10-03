@@ -26,7 +26,7 @@ let selected_incident = {
 
 async function getIncidents() {
   try {
-    const response = await axios.get('https://poc-postgresql-server-route-poc-thesis-bram-terlouw.apps.cluster-nvtcj.sandbox1725.opentlc.com/api/incidents');
+    const response = await axios.get('https://poc-postgresql-server-route-demo.apps.cluster-cb9cv.sandbox177.opentlc.com/api/incidents');
     const data = response.data;
 
     const statusMapping = {

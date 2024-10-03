@@ -7,7 +7,7 @@ const port = 3000;
 
 const client = new Client({
     user: 'dev',
-    host: 'poc-postgress-service.poc-thesis-bram-terlouw.svc.cluster.local',
+    host: 'poc-postgress-service.demo.svc.cluster.local',
     database: 'incidents',
     password: 'password',
     port: 5432,
